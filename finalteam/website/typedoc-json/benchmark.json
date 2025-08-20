@@ -1,0 +1,3449 @@
+{
+	"id": 0,
+	"name": "@agentica/benchmark",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 22,
+			"name": "AgenticaCallBenchmark",
+			"variant": "declaration",
+			"kind": 4,
+			"flags": {},
+			"children": [
+				{
+					"id": 28,
+					"name": "IConfig",
+					"variant": "declaration",
+					"kind": 256,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Configuration for the benchmark.\r\n\r\n"
+							},
+							{
+								"kind": "code",
+								"text": "`AgenticaSelectBenchmark.IConfig`"
+							},
+							{
+								"kind": "text",
+								"text": " is a data structure which\r\nrepresents a configuration for the benchmark, especially the\r\ncapacity information of the benchmark execution."
+							}
+						]
+					},
+					"children": [
+						{
+							"id": 31,
+							"name": "consent",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Number of consents.\r\n\r\nAI agent sometimes asks user to consent to the function\r\ncalling, and perform it at the next step.\r\n\r\nThis property represents the number of consents to allow.\r\nIf the number of consents from the AI agent exceeds the\r\nconfigured value, the benchmark will be failed."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@default",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\n3\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "AgenticaCallBenchmark.ts",
+									"line": 280,
+									"character": 4,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaCallBenchmark.ts#L280"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						},
+						{
+							"id": 29,
+							"name": "repeat",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Repeat count.\r\n\r\nThe number of repeating count for the benchmark execution\r\nfor each scenario."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@default",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\n10\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "AgenticaCallBenchmark.ts",
+									"line": 252,
+									"character": 4,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaCallBenchmark.ts#L252"
+								}
+							],
+							"type": {
+								"type": "intersection",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "number"
+									},
+									{
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/typia@9.3.1_@samchon+openapi@4.3.3_typescript@5.8.3/node_modules/typia/lib/tags/Type.d.ts",
+											"qualifiedName": "Type"
+										},
+										"typeArguments": [
+											{
+												"type": "literal",
+												"value": "uint32"
+											}
+										],
+										"name": "Type",
+										"package": "typia"
+									},
+									{
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/typia@9.3.1_@samchon+openapi@4.3.3_typescript@5.8.3/node_modules/typia/lib/tags/Minimum.d.ts",
+											"qualifiedName": "Minimum"
+										},
+										"typeArguments": [
+											{
+												"type": "literal",
+												"value": 1
+											}
+										],
+										"name": "Minimum",
+										"package": "typia"
+									}
+								]
+							}
+						},
+						{
+							"id": 30,
+							"name": "simultaneous",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Simultaneous count.\r\n\r\nThe number of simultaneous count for the parallel benchmark\r\nexecution.\r\n\r\nIf you configure this property greater than "
+									},
+									{
+										"kind": "code",
+										"text": "`1`"
+									},
+									{
+										"kind": "text",
+										"text": ", the benchmark\r\nfor each scenario would be executed in parallel in the given\r\ncount."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@default",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\n10\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "AgenticaCallBenchmark.ts",
+									"line": 266,
+									"character": 4,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaCallBenchmark.ts#L266"
+								}
+							],
+							"type": {
+								"type": "intersection",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "number"
+									},
+									{
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/typia@9.3.1_@samchon+openapi@4.3.3_typescript@5.8.3/node_modules/typia/lib/tags/Type.d.ts",
+											"qualifiedName": "Type"
+										},
+										"typeArguments": [
+											{
+												"type": "literal",
+												"value": "uint32"
+											}
+										],
+										"name": "Type",
+										"package": "typia"
+									},
+									{
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/typia@9.3.1_@samchon+openapi@4.3.3_typescript@5.8.3/node_modules/typia/lib/tags/Minimum.d.ts",
+											"qualifiedName": "Minimum"
+										},
+										"typeArguments": [
+											{
+												"type": "literal",
+												"value": 1
+											}
+										],
+										"name": "Minimum",
+										"package": "typia"
+									}
+								]
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"children": [
+								31,
+								29,
+								30
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "AgenticaCallBenchmark.ts",
+							"line": 243,
+							"character": 19,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaCallBenchmark.ts#L243"
+						}
+					]
+				},
+				{
+					"id": 23,
+					"name": "IProps",
+					"variant": "declaration",
+					"kind": 256,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Properties of the "
+							},
+							{
+								"kind": "inline-tag",
+								"tag": "@link",
+								"text": "AgenticaCallBenchmark",
+								"target": 1
+							},
+							{
+								"kind": "text",
+								"text": " constructor."
+							}
+						]
+					},
+					"children": [
+						{
+							"id": 24,
+							"name": "agent",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "AI agent instance."
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "AgenticaCallBenchmark.ts",
+									"line": 223,
+									"character": 4,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaCallBenchmark.ts#L223"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../packages/core/src/Agentica.ts",
+									"qualifiedName": "Agentica"
+								},
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": 27,
+										"name": "Model",
+										"package": "@agentica/benchmark",
+										"qualifiedName": "AgenticaCallBenchmark.IProps.Model",
+										"refersToTypeParameter": true
+									}
+								],
+								"name": "Agentica",
+								"package": "@agentica/core"
+							}
+						},
+						{
+							"id": 26,
+							"name": "config",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isOptional": true
+							},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Configuration for the benchmark."
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "AgenticaCallBenchmark.ts",
+									"line": 233,
+									"character": 4,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaCallBenchmark.ts#L233"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib/lib.es5.d.ts",
+									"qualifiedName": "Partial"
+								},
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": 28,
+										"name": "IConfig",
+										"package": "@agentica/benchmark",
+										"qualifiedName": "AgenticaCallBenchmark.IConfig"
+									}
+								],
+								"name": "Partial",
+								"package": "typescript"
+							}
+						},
+						{
+							"id": 25,
+							"name": "scenarios",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "List of scenarios what you expect."
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "AgenticaCallBenchmark.ts",
+									"line": 228,
+									"character": 4,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaCallBenchmark.ts#L228"
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"target": {
+										"sourceFileName": "../packages/benchmark/src/structures/IAgenticaCallBenchmarkScenario.ts",
+										"qualifiedName": "IAgenticaCallBenchmarkScenario"
+									},
+									"typeArguments": [
+										{
+											"type": "reference",
+											"target": 27,
+											"name": "Model",
+											"package": "@agentica/benchmark",
+											"qualifiedName": "AgenticaCallBenchmark.IProps.Model",
+											"refersToTypeParameter": true
+										}
+									],
+									"name": "IAgenticaCallBenchmarkScenario",
+									"package": "@agentica/benchmark"
+								}
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"children": [
+								24,
+								26,
+								25
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "AgenticaCallBenchmark.ts",
+							"line": 219,
+							"character": 19,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaCallBenchmark.ts#L219"
+						}
+					],
+					"typeParameters": [
+						{
+							"id": 27,
+							"name": "Model",
+							"variant": "typeParam",
+							"kind": 131072,
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../node_modules/.pnpm/@samchon+openapi@4.3.3/node_modules/@samchon/openapi/lib/structures/ILlmSchema.d.ts",
+									"qualifiedName": "ILlmSchema.Model"
+								},
+								"name": "ILlmSchema.Model",
+								"package": "@samchon/openapi"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Interfaces",
+					"children": [
+						28,
+						23
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "AgenticaCallBenchmark.ts",
+					"line": 41,
+					"character": 13,
+					"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaCallBenchmark.ts#L41"
+				},
+				{
+					"fileName": "AgenticaCallBenchmark.ts",
+					"line": 215,
+					"character": 17,
+					"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaCallBenchmark.ts#L215"
+				}
+			]
+		},
+		{
+			"id": 54,
+			"name": "AgenticaSelectBenchmark",
+			"variant": "declaration",
+			"kind": 4,
+			"flags": {},
+			"children": [
+				{
+					"id": 60,
+					"name": "IConfig",
+					"variant": "declaration",
+					"kind": 256,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Configuration for the benchmark.\r\n\r\n"
+							},
+							{
+								"kind": "code",
+								"text": "`AgenticaSelectBenchmark.IConfig`"
+							},
+							{
+								"kind": "text",
+								"text": " is a data structure which\r\nrepresents a configuration for the benchmark, especially the\r\ncapacity information of the benchmark execution."
+							}
+						]
+					},
+					"children": [
+						{
+							"id": 61,
+							"name": "repeat",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Repeat count.\r\n\r\nThe number of repeating count for the benchmark execution\r\nfor each scenario."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@default",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\n10\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "AgenticaSelectBenchmark.ts",
+									"line": 267,
+									"character": 4,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaSelectBenchmark.ts#L267"
+								}
+							],
+							"type": {
+								"type": "intersection",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "number"
+									},
+									{
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/typia@9.3.1_@samchon+openapi@4.3.3_typescript@5.8.3/node_modules/typia/lib/tags/Type.d.ts",
+											"qualifiedName": "Type"
+										},
+										"typeArguments": [
+											{
+												"type": "literal",
+												"value": "uint32"
+											}
+										],
+										"name": "Type",
+										"package": "typia"
+									},
+									{
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/typia@9.3.1_@samchon+openapi@4.3.3_typescript@5.8.3/node_modules/typia/lib/tags/Minimum.d.ts",
+											"qualifiedName": "Minimum"
+										},
+										"typeArguments": [
+											{
+												"type": "literal",
+												"value": 1
+											}
+										],
+										"name": "Minimum",
+										"package": "typia"
+									}
+								]
+							}
+						},
+						{
+							"id": 62,
+							"name": "simultaneous",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Simultaneous count.\r\n\r\nThe number of simultaneous count for the parallel benchmark\r\nexecution.\r\n\r\nIf you configure this property greater than "
+									},
+									{
+										"kind": "code",
+										"text": "`1`"
+									},
+									{
+										"kind": "text",
+										"text": ", the benchmark\r\nfor each scenario would be executed in parallel in the given\r\ncount."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@default",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\n10\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "AgenticaSelectBenchmark.ts",
+									"line": 281,
+									"character": 4,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaSelectBenchmark.ts#L281"
+								}
+							],
+							"type": {
+								"type": "intersection",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "number"
+									},
+									{
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/typia@9.3.1_@samchon+openapi@4.3.3_typescript@5.8.3/node_modules/typia/lib/tags/Type.d.ts",
+											"qualifiedName": "Type"
+										},
+										"typeArguments": [
+											{
+												"type": "literal",
+												"value": "uint32"
+											}
+										],
+										"name": "Type",
+										"package": "typia"
+									},
+									{
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/typia@9.3.1_@samchon+openapi@4.3.3_typescript@5.8.3/node_modules/typia/lib/tags/Minimum.d.ts",
+											"qualifiedName": "Minimum"
+										},
+										"typeArguments": [
+											{
+												"type": "literal",
+												"value": 1
+											}
+										],
+										"name": "Minimum",
+										"package": "typia"
+									}
+								]
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"children": [
+								61,
+								62
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "AgenticaSelectBenchmark.ts",
+							"line": 258,
+							"character": 19,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaSelectBenchmark.ts#L258"
+						}
+					]
+				},
+				{
+					"id": 55,
+					"name": "IProps",
+					"variant": "declaration",
+					"kind": 256,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Properties of the "
+							},
+							{
+								"kind": "inline-tag",
+								"tag": "@link",
+								"text": "AgenticaSelectBenchmark",
+								"target": 32
+							},
+							{
+								"kind": "text",
+								"text": " constructor."
+							}
+						]
+					},
+					"children": [
+						{
+							"id": 56,
+							"name": "agent",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "AI agent instance."
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "AgenticaSelectBenchmark.ts",
+									"line": 238,
+									"character": 4,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaSelectBenchmark.ts#L238"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../packages/core/src/Agentica.ts",
+									"qualifiedName": "Agentica"
+								},
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": 59,
+										"name": "Model",
+										"package": "@agentica/benchmark",
+										"qualifiedName": "AgenticaSelectBenchmark.IProps.Model",
+										"refersToTypeParameter": true
+									}
+								],
+								"name": "Agentica",
+								"package": "@agentica/core"
+							}
+						},
+						{
+							"id": 58,
+							"name": "config",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isOptional": true
+							},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Configuration for the benchmark."
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "AgenticaSelectBenchmark.ts",
+									"line": 248,
+									"character": 4,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaSelectBenchmark.ts#L248"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib/lib.es5.d.ts",
+									"qualifiedName": "Partial"
+								},
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": 60,
+										"name": "IConfig",
+										"package": "@agentica/benchmark",
+										"qualifiedName": "AgenticaSelectBenchmark.IConfig"
+									}
+								],
+								"name": "Partial",
+								"package": "typescript"
+							}
+						},
+						{
+							"id": 57,
+							"name": "scenarios",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "List of scenarios what you expect."
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "AgenticaSelectBenchmark.ts",
+									"line": 243,
+									"character": 4,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaSelectBenchmark.ts#L243"
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"target": {
+										"sourceFileName": "../packages/benchmark/src/structures/IAgenticaSelectBenchmarkScenario.ts",
+										"qualifiedName": "IAgenticaSelectBenchmarkScenario"
+									},
+									"typeArguments": [
+										{
+											"type": "reference",
+											"target": 59,
+											"name": "Model",
+											"package": "@agentica/benchmark",
+											"qualifiedName": "AgenticaSelectBenchmark.IProps.Model",
+											"refersToTypeParameter": true
+										}
+									],
+									"name": "IAgenticaSelectBenchmarkScenario",
+									"package": "@agentica/benchmark"
+								}
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"children": [
+								56,
+								58,
+								57
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "AgenticaSelectBenchmark.ts",
+							"line": 234,
+							"character": 19,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaSelectBenchmark.ts#L234"
+						}
+					],
+					"typeParameters": [
+						{
+							"id": 59,
+							"name": "Model",
+							"variant": "typeParam",
+							"kind": 131072,
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../node_modules/.pnpm/@samchon+openapi@4.3.3/node_modules/@samchon/openapi/lib/structures/ILlmSchema.d.ts",
+									"qualifiedName": "ILlmSchema.Model"
+								},
+								"name": "ILlmSchema.Model",
+								"package": "@samchon/openapi"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Interfaces",
+					"children": [
+						60,
+						55
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "AgenticaSelectBenchmark.ts",
+					"line": 45,
+					"character": 13,
+					"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaSelectBenchmark.ts#L45"
+				},
+				{
+					"fileName": "AgenticaSelectBenchmark.ts",
+					"line": 230,
+					"character": 17,
+					"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaSelectBenchmark.ts#L230"
+				}
+			]
+		},
+		{
+			"id": 84,
+			"name": "MicroAgenticaCallBenchmark",
+			"variant": "declaration",
+			"kind": 4,
+			"flags": {},
+			"children": [
+				{
+					"id": 90,
+					"name": "IConfig",
+					"variant": "declaration",
+					"kind": 256,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Configuration for the benchmark.\r\n\r\n"
+							},
+							{
+								"kind": "code",
+								"text": "`AgenticaSelectBenchmark.IConfig`"
+							},
+							{
+								"kind": "text",
+								"text": " is a data structure which\r\nrepresents a configuration for the benchmark, especially the\r\ncapacity information of the benchmark execution."
+							}
+						]
+					},
+					"children": [
+						{
+							"id": 93,
+							"name": "consent",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Number of consents.\r\n\r\nAI agent sometimes asks user to consent to the function\r\ncalling, and perform it at the next step.\r\n\r\nThis property represents the number of consents to allow.\r\nIf the number of consents from the AI agent exceeds the\r\nconfigured value, the benchmark will be failed."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@default",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\n3\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "MicroAgenticaCallBenchmark.ts",
+									"line": 280,
+									"character": 4,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/MicroAgenticaCallBenchmark.ts#L280"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						},
+						{
+							"id": 91,
+							"name": "repeat",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Repeat count.\r\n\r\nThe number of repeating count for the benchmark execution\r\nfor each scenario."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@default",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\n10\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "MicroAgenticaCallBenchmark.ts",
+									"line": 252,
+									"character": 4,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/MicroAgenticaCallBenchmark.ts#L252"
+								}
+							],
+							"type": {
+								"type": "intersection",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "number"
+									},
+									{
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/typia@9.3.1_@samchon+openapi@4.3.3_typescript@5.8.3/node_modules/typia/lib/tags/Type.d.ts",
+											"qualifiedName": "Type"
+										},
+										"typeArguments": [
+											{
+												"type": "literal",
+												"value": "uint32"
+											}
+										],
+										"name": "Type",
+										"package": "typia"
+									},
+									{
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/typia@9.3.1_@samchon+openapi@4.3.3_typescript@5.8.3/node_modules/typia/lib/tags/Minimum.d.ts",
+											"qualifiedName": "Minimum"
+										},
+										"typeArguments": [
+											{
+												"type": "literal",
+												"value": 1
+											}
+										],
+										"name": "Minimum",
+										"package": "typia"
+									}
+								]
+							}
+						},
+						{
+							"id": 92,
+							"name": "simultaneous",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Simultaneous count.\r\n\r\nThe number of simultaneous count for the parallel benchmark\r\nexecution.\r\n\r\nIf you configure this property greater than "
+									},
+									{
+										"kind": "code",
+										"text": "`1`"
+									},
+									{
+										"kind": "text",
+										"text": ", the benchmark\r\nfor each scenario would be executed in parallel in the given\r\ncount."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@default",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\n10\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "MicroAgenticaCallBenchmark.ts",
+									"line": 266,
+									"character": 4,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/MicroAgenticaCallBenchmark.ts#L266"
+								}
+							],
+							"type": {
+								"type": "intersection",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "number"
+									},
+									{
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/typia@9.3.1_@samchon+openapi@4.3.3_typescript@5.8.3/node_modules/typia/lib/tags/Type.d.ts",
+											"qualifiedName": "Type"
+										},
+										"typeArguments": [
+											{
+												"type": "literal",
+												"value": "uint32"
+											}
+										],
+										"name": "Type",
+										"package": "typia"
+									},
+									{
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/typia@9.3.1_@samchon+openapi@4.3.3_typescript@5.8.3/node_modules/typia/lib/tags/Minimum.d.ts",
+											"qualifiedName": "Minimum"
+										},
+										"typeArguments": [
+											{
+												"type": "literal",
+												"value": 1
+											}
+										],
+										"name": "Minimum",
+										"package": "typia"
+									}
+								]
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"children": [
+								93,
+								91,
+								92
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "MicroAgenticaCallBenchmark.ts",
+							"line": 243,
+							"character": 19,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/MicroAgenticaCallBenchmark.ts#L243"
+						}
+					]
+				},
+				{
+					"id": 85,
+					"name": "IProps",
+					"variant": "declaration",
+					"kind": 256,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Properties of the "
+							},
+							{
+								"kind": "inline-tag",
+								"tag": "@link",
+								"text": "MicroAgenticaCallBenchmark",
+								"target": 63
+							},
+							{
+								"kind": "text",
+								"text": " constructor."
+							}
+						]
+					},
+					"children": [
+						{
+							"id": 86,
+							"name": "agent",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "AI agent instance."
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "MicroAgenticaCallBenchmark.ts",
+									"line": 223,
+									"character": 4,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/MicroAgenticaCallBenchmark.ts#L223"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../packages/core/src/MicroAgentica.ts",
+									"qualifiedName": "MicroAgentica"
+								},
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": 89,
+										"name": "Model",
+										"package": "@agentica/benchmark",
+										"qualifiedName": "MicroAgenticaCallBenchmark.IProps.Model",
+										"refersToTypeParameter": true
+									}
+								],
+								"name": "MicroAgentica",
+								"package": "@agentica/core"
+							}
+						},
+						{
+							"id": 88,
+							"name": "config",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isOptional": true
+							},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Configuration for the benchmark."
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "MicroAgenticaCallBenchmark.ts",
+									"line": 233,
+									"character": 4,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/MicroAgenticaCallBenchmark.ts#L233"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib/lib.es5.d.ts",
+									"qualifiedName": "Partial"
+								},
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": 90,
+										"name": "IConfig",
+										"package": "@agentica/benchmark",
+										"qualifiedName": "MicroAgenticaCallBenchmark.IConfig"
+									}
+								],
+								"name": "Partial",
+								"package": "typescript"
+							}
+						},
+						{
+							"id": 87,
+							"name": "scenarios",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "List of scenarios what you expect."
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "MicroAgenticaCallBenchmark.ts",
+									"line": 228,
+									"character": 4,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/MicroAgenticaCallBenchmark.ts#L228"
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"target": {
+										"sourceFileName": "../packages/benchmark/src/structures/IAgenticaCallBenchmarkScenario.ts",
+										"qualifiedName": "IAgenticaCallBenchmarkScenario"
+									},
+									"typeArguments": [
+										{
+											"type": "reference",
+											"target": 89,
+											"name": "Model",
+											"package": "@agentica/benchmark",
+											"qualifiedName": "MicroAgenticaCallBenchmark.IProps.Model",
+											"refersToTypeParameter": true
+										}
+									],
+									"name": "IAgenticaCallBenchmarkScenario",
+									"package": "@agentica/benchmark"
+								}
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"children": [
+								86,
+								88,
+								87
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "MicroAgenticaCallBenchmark.ts",
+							"line": 219,
+							"character": 19,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/MicroAgenticaCallBenchmark.ts#L219"
+						}
+					],
+					"typeParameters": [
+						{
+							"id": 89,
+							"name": "Model",
+							"variant": "typeParam",
+							"kind": 131072,
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../node_modules/.pnpm/@samchon+openapi@4.3.3/node_modules/@samchon/openapi/lib/structures/ILlmSchema.d.ts",
+									"qualifiedName": "ILlmSchema.Model"
+								},
+								"name": "ILlmSchema.Model",
+								"package": "@samchon/openapi"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Interfaces",
+					"children": [
+						90,
+						85
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "MicroAgenticaCallBenchmark.ts",
+					"line": 41,
+					"character": 13,
+					"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/MicroAgenticaCallBenchmark.ts#L41"
+				},
+				{
+					"fileName": "MicroAgenticaCallBenchmark.ts",
+					"line": 215,
+					"character": 17,
+					"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/MicroAgenticaCallBenchmark.ts#L215"
+				}
+			]
+		},
+		{
+			"id": 1,
+			"name": "AgenticaCallBenchmark",
+			"variant": "declaration",
+			"kind": 128,
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "LLM function calling selection benchmark.\r\n\r\n"
+					},
+					{
+						"kind": "code",
+						"text": "`AgenticaCallBenchmark`"
+					},
+					{
+						"kind": "text",
+						"text": " is a class for the benchmark of the\r\nLLM (Large Model Language) function calling part. It utilizes both\r\n"
+					},
+					{
+						"kind": "code",
+						"text": "`selector`"
+					},
+					{
+						"kind": "text",
+						"text": " and "
+					},
+					{
+						"kind": "code",
+						"text": "`caller`"
+					},
+					{
+						"kind": "text",
+						"text": " agents and tests whether the expected\r\n"
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "IAgenticaOperation operations"
+					},
+					{
+						"kind": "text",
+						"text": " are properly selected and\r\ncalled from the given\r\n"
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "IAgenticaCallBenchmarkScenario scenarios",
+						"target": {
+							"sourceFileName": "../packages/benchmark/src/structures/IAgenticaCallBenchmarkScenario.ts",
+							"qualifiedName": "IAgenticaCallBenchmarkScenario"
+						},
+						"tsLinkText": "scenarios"
+					},
+					{
+						"kind": "text",
+						"text": ".\r\n\r\nNote that, this "
+					},
+					{
+						"kind": "code",
+						"text": "`AgenticaCallBenchmark`"
+					},
+					{
+						"kind": "text",
+						"text": " consumes a lot of time and\r\nLLM token costs because it needs the whole process of the\r\n"
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "Agentica",
+						"target": {
+							"sourceFileName": "../packages/core/src/Agentica.ts",
+							"qualifiedName": "Agentica"
+						}
+					},
+					{
+						"kind": "text",
+						"text": " class with a lot of repetitions. If you don't want\r\nsuch a heavy benchmark, consider to using\r\n"
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "AgenticaSelectBenchmark",
+						"target": 54
+					},
+					{
+						"kind": "text",
+						"text": " instead. In my experience,\r\n"
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "Agentica",
+						"target": {
+							"sourceFileName": "../packages/core/src/Agentica.ts",
+							"qualifiedName": "Agentica"
+						}
+					},
+					{
+						"kind": "text",
+						"text": " does not fail to function calling, so the function\r\nselection benchmark is much economical."
+					}
+				],
+				"blockTags": [
+					{
+						"tag": "@author",
+						"content": [
+							{
+								"kind": "text",
+								"text": "Samchon"
+							}
+						]
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 2,
+					"name": "constructor",
+					"variant": "declaration",
+					"kind": 512,
+					"flags": {
+						"isPublic": true
+					},
+					"sources": [
+						{
+							"fileName": "AgenticaCallBenchmark.ts",
+							"line": 52,
+							"character": 2,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaCallBenchmark.ts#L52"
+						}
+					],
+					"signatures": [
+						{
+							"id": 3,
+							"name": "AgenticaCallBenchmark",
+							"variant": "signature",
+							"kind": 16384,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Initializer Constructor."
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "AgenticaCallBenchmark.ts",
+									"line": 52,
+									"character": 2,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaCallBenchmark.ts#L52"
+								}
+							],
+							"typeParameters": [
+								{
+									"id": 4,
+									"name": "Model",
+									"variant": "typeParam",
+									"kind": 131072,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/@samchon+openapi@4.3.3/node_modules/@samchon/openapi/lib/structures/ILlmSchema.d.ts",
+											"qualifiedName": "ILlmSchema.Model"
+										},
+										"name": "Model",
+										"package": "@samchon/openapi",
+										"qualifiedName": "ILlmSchema.Model"
+									}
+								}
+							],
+							"parameters": [
+								{
+									"id": 5,
+									"name": "props",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "Properties of the selection benchmark"
+											}
+										]
+									},
+									"type": {
+										"type": "reference",
+										"target": 23,
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": 4,
+												"name": "Model",
+												"package": "@agentica/benchmark",
+												"qualifiedName": "AgenticaCallBenchmark.Model",
+												"refersToTypeParameter": true
+											}
+										],
+										"name": "IProps",
+										"package": "@agentica/benchmark",
+										"qualifiedName": "AgenticaCallBenchmark.IProps"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 1,
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": 4,
+										"name": "Model",
+										"package": "@agentica/benchmark",
+										"qualifiedName": "AgenticaCallBenchmark.Model",
+										"refersToTypeParameter": true
+									}
+								],
+								"name": "AgenticaCallBenchmark",
+								"package": "@agentica/benchmark"
+							}
+						}
+					]
+				},
+				{
+					"id": 10,
+					"name": "execute",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {
+						"isPublic": true
+					},
+					"sources": [
+						{
+							"fileName": "AgenticaCallBenchmark.ts",
+							"line": 79,
+							"character": 15,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaCallBenchmark.ts#L79"
+						}
+					],
+					"signatures": [
+						{
+							"id": 11,
+							"name": "execute",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Execute the benchmark.\r\n\r\nExecute the benchmark of the LLM function calling, and returns\r\nthe result of the benchmark.\r\n\r\nIf you wanna see progress of the benchmark, you can pass a callback\r\nfunction as the argument of the "
+									},
+									{
+										"kind": "code",
+										"text": "`listener`"
+									},
+									{
+										"kind": "text",
+										"text": ". The callback function\r\nwould be called whenever a benchmark event is occurred.\r\n\r\nAlso, you can publish a markdown format report by calling\r\nthe "
+									},
+									{
+										"kind": "inline-tag",
+										"tag": "@link",
+										"text": "report",
+										"target": 16
+									},
+									{
+										"kind": "text",
+										"text": " function after the benchmark execution."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "Results of the function calling benchmark"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "AgenticaCallBenchmark.ts",
+									"line": 79,
+									"character": 15,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaCallBenchmark.ts#L79"
+								}
+							],
+							"parameters": [
+								{
+									"id": 12,
+									"name": "listener",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {
+										"isOptional": true
+									},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "Callback function listening the benchmark events"
+											}
+										]
+									},
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 13,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "AgenticaCallBenchmark.ts",
+													"line": 80,
+													"character": 15,
+													"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaCallBenchmark.ts#L80"
+												}
+											],
+											"signatures": [
+												{
+													"id": 14,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "AgenticaCallBenchmark.ts",
+															"line": 80,
+															"character": 15,
+															"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaCallBenchmark.ts#L80"
+														}
+													],
+													"parameters": [
+														{
+															"id": 15,
+															"name": "event",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "reference",
+																"target": {
+																	"sourceFileName": "../packages/benchmark/src/structures/IAgenticaCallBenchmarkEvent.ts",
+																	"qualifiedName": "IAgenticaCallBenchmarkEvent"
+																},
+																"typeArguments": [
+																	{
+																		"type": "reference",
+																		"target": 4,
+																		"name": "Model",
+																		"package": "@agentica/benchmark",
+																		"qualifiedName": "AgenticaCallBenchmark.Model",
+																		"refersToTypeParameter": true
+																	}
+																],
+																"name": "IAgenticaCallBenchmarkEvent",
+																"package": "@agentica/benchmark"
+															}
+														}
+													],
+													"type": {
+														"type": "intrinsic",
+														"name": "void"
+													}
+												}
+											]
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib/lib.es5.d.ts",
+									"qualifiedName": "Promise"
+								},
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../packages/benchmark/src/structures/IAgenticaCallBenchmarkResult.ts",
+											"qualifiedName": "IAgenticaCallBenchmarkResult"
+										},
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": 4,
+												"name": "Model",
+												"package": "@agentica/benchmark",
+												"qualifiedName": "AgenticaCallBenchmark.Model",
+												"refersToTypeParameter": true
+											}
+										],
+										"name": "IAgenticaCallBenchmarkResult",
+										"package": "@agentica/benchmark"
+									}
+								],
+								"name": "Promise",
+								"package": "typescript"
+							}
+						}
+					]
+				},
+				{
+					"id": 16,
+					"name": "report",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {
+						"isPublic": true
+					},
+					"sources": [
+						{
+							"fileName": "AgenticaCallBenchmark.ts",
+							"line": 139,
+							"character": 9,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaCallBenchmark.ts#L139"
+						}
+					],
+					"signatures": [
+						{
+							"id": 17,
+							"name": "report",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Report the benchmark result as markdown files.\r\n\r\nReport the benchmark result "
+									},
+									{
+										"kind": "inline-tag",
+										"tag": "@link",
+										"text": "execute",
+										"target": 10
+									},
+									{
+										"kind": "text",
+										"text": "d by\r\n"
+									},
+									{
+										"kind": "code",
+										"text": "`AgenticaCallBenchmark`"
+									},
+									{
+										"kind": "text",
+										"text": " as markdown files, and returns a dictionary\r\nobject of the markdown reporting files. The key of the dictionary\r\nwould be file name, and the value would be the markdown content.\r\n\r\nFor reference, the markdown files are composed like below:\r\n\r\n- "
+									},
+									{
+										"kind": "code",
+										"text": "`./README.md`"
+									},
+									{
+										"kind": "text",
+										"text": "\r\n- "
+									},
+									{
+										"kind": "code",
+										"text": "`./scenario-1/README.md`"
+									},
+									{
+										"kind": "text",
+										"text": "\r\n- "
+									},
+									{
+										"kind": "code",
+										"text": "`./scenario-1/1.success.md`"
+									},
+									{
+										"kind": "text",
+										"text": "\r\n- "
+									},
+									{
+										"kind": "code",
+										"text": "`./scenario-1/2.failure.md`"
+									},
+									{
+										"kind": "text",
+										"text": "\r\n- "
+									},
+									{
+										"kind": "code",
+										"text": "`./scenario-1/3.error.md`"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "Dictionary of markdown files."
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "AgenticaCallBenchmark.ts",
+									"line": 139,
+									"character": 9,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaCallBenchmark.ts#L139"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib/lib.es5.d.ts",
+									"qualifiedName": "Record"
+								},
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								],
+								"name": "Record",
+								"package": "typescript"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"children": [
+						2
+					]
+				},
+				{
+					"title": "Methods",
+					"children": [
+						10,
+						16
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "AgenticaCallBenchmark.ts",
+					"line": 41,
+					"character": 13,
+					"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaCallBenchmark.ts#L41"
+				},
+				{
+					"fileName": "AgenticaCallBenchmark.ts",
+					"line": 215,
+					"character": 17,
+					"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaCallBenchmark.ts#L215"
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 21,
+					"name": "Model",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../node_modules/.pnpm/@samchon+openapi@4.3.3/node_modules/@samchon/openapi/lib/structures/ILlmSchema.d.ts",
+							"qualifiedName": "ILlmSchema.Model"
+						},
+						"name": "ILlmSchema.Model",
+						"package": "@samchon/openapi"
+					}
+				}
+			]
+		},
+		{
+			"id": 32,
+			"name": "AgenticaSelectBenchmark",
+			"variant": "declaration",
+			"kind": 128,
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "LLM function calling selection benchmark.\r\n\r\n"
+					},
+					{
+						"kind": "code",
+						"text": "`AgenticaSelectBenchmark`"
+					},
+					{
+						"kind": "text",
+						"text": " is a class for the benchmark of the\r\nLLM (Large Model Language) function calling's selection part.\r\nIt utilizes the "
+					},
+					{
+						"kind": "code",
+						"text": "`selector`"
+					},
+					{
+						"kind": "text",
+						"text": " agent and tests whether the expected\r\n"
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "IAgenticaOperation operations"
+					},
+					{
+						"kind": "text",
+						"text": " are properly selected from\r\nthe given "
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "IAgenticaSelectBenchmarkScenario scenarios",
+						"target": {
+							"sourceFileName": "../packages/benchmark/src/structures/IAgenticaSelectBenchmarkScenario.ts",
+							"qualifiedName": "IAgenticaSelectBenchmarkScenario"
+						},
+						"tsLinkText": "scenarios"
+					},
+					{
+						"kind": "text",
+						"text": ".\r\n\r\nNote that, this "
+					},
+					{
+						"kind": "code",
+						"text": "`AgenticaSelectBenchmark`"
+					},
+					{
+						"kind": "text",
+						"text": " class measures only the\r\nselection benchmark, testing whether the "
+					},
+					{
+						"kind": "code",
+						"text": "`selector`"
+					},
+					{
+						"kind": "text",
+						"text": " agent can select\r\ncandidate functions to call as expected. Therefore, it does not test\r\nabout the actual function calling which is done by the "
+					},
+					{
+						"kind": "code",
+						"text": "`executor`"
+					},
+					{
+						"kind": "text",
+						"text": " agent.\r\nIf you want that feature, use "
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "AgenticaCallBenchmark",
+						"target": 22
+					},
+					{
+						"kind": "text",
+						"text": " class instead."
+					}
+				],
+				"blockTags": [
+					{
+						"tag": "@author",
+						"content": [
+							{
+								"kind": "text",
+								"text": "Samchon"
+							}
+						]
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 33,
+					"name": "constructor",
+					"variant": "declaration",
+					"kind": 512,
+					"flags": {
+						"isPublic": true
+					},
+					"sources": [
+						{
+							"fileName": "AgenticaSelectBenchmark.ts",
+							"line": 57,
+							"character": 2,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaSelectBenchmark.ts#L57"
+						}
+					],
+					"signatures": [
+						{
+							"id": 34,
+							"name": "AgenticaSelectBenchmark",
+							"variant": "signature",
+							"kind": 16384,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Initializer Constructor."
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "AgenticaSelectBenchmark.ts",
+									"line": 57,
+									"character": 2,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaSelectBenchmark.ts#L57"
+								}
+							],
+							"typeParameters": [
+								{
+									"id": 35,
+									"name": "Model",
+									"variant": "typeParam",
+									"kind": 131072,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/@samchon+openapi@4.3.3/node_modules/@samchon/openapi/lib/structures/ILlmSchema.d.ts",
+											"qualifiedName": "ILlmSchema.Model"
+										},
+										"name": "Model",
+										"package": "@samchon/openapi",
+										"qualifiedName": "ILlmSchema.Model"
+									}
+								}
+							],
+							"parameters": [
+								{
+									"id": 36,
+									"name": "props",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "Properties of the selection benchmark"
+											}
+										]
+									},
+									"type": {
+										"type": "reference",
+										"target": 55,
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": 35,
+												"name": "Model",
+												"package": "@agentica/benchmark",
+												"qualifiedName": "AgenticaSelectBenchmark.Model",
+												"refersToTypeParameter": true
+											}
+										],
+										"name": "IProps",
+										"package": "@agentica/benchmark",
+										"qualifiedName": "AgenticaSelectBenchmark.IProps"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 32,
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": 35,
+										"name": "Model",
+										"package": "@agentica/benchmark",
+										"qualifiedName": "AgenticaSelectBenchmark.Model",
+										"refersToTypeParameter": true
+									}
+								],
+								"name": "AgenticaSelectBenchmark",
+								"package": "@agentica/benchmark"
+							}
+						}
+					]
+				},
+				{
+					"id": 42,
+					"name": "execute",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {
+						"isPublic": true
+					},
+					"sources": [
+						{
+							"fileName": "AgenticaSelectBenchmark.ts",
+							"line": 84,
+							"character": 15,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaSelectBenchmark.ts#L84"
+						}
+					],
+					"signatures": [
+						{
+							"id": 43,
+							"name": "execute",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Execute the benchmark.\r\n\r\nExecute the benchmark of the LLM function selection, and returns\r\nthe result of the benchmark.\r\n\r\nIf you wanna see progress of the benchmark, you can pass a callback\r\nfunction as the argument of the "
+									},
+									{
+										"kind": "code",
+										"text": "`listener`"
+									},
+									{
+										"kind": "text",
+										"text": ". The callback function\r\nwould be called whenever a benchmark event is occurred.\r\n\r\nAlso, you can publish a markdown format report by calling\r\nthe "
+									},
+									{
+										"kind": "inline-tag",
+										"tag": "@link",
+										"text": "report",
+										"target": 48
+									},
+									{
+										"kind": "text",
+										"text": " function after the benchmark execution."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "Results of the function selection benchmark"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "AgenticaSelectBenchmark.ts",
+									"line": 84,
+									"character": 15,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaSelectBenchmark.ts#L84"
+								}
+							],
+							"parameters": [
+								{
+									"id": 44,
+									"name": "listener",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {
+										"isOptional": true
+									},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "Callback function listening the benchmark events"
+											}
+										]
+									},
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 45,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "AgenticaSelectBenchmark.ts",
+													"line": 85,
+													"character": 15,
+													"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaSelectBenchmark.ts#L85"
+												}
+											],
+											"signatures": [
+												{
+													"id": 46,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "AgenticaSelectBenchmark.ts",
+															"line": 85,
+															"character": 15,
+															"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaSelectBenchmark.ts#L85"
+														}
+													],
+													"parameters": [
+														{
+															"id": 47,
+															"name": "event",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "reference",
+																"target": {
+																	"sourceFileName": "../packages/benchmark/src/structures/IAgenticaSelectBenchmarkEvent.ts",
+																	"qualifiedName": "IAgenticaSelectBenchmarkEvent"
+																},
+																"typeArguments": [
+																	{
+																		"type": "reference",
+																		"target": 35,
+																		"name": "Model",
+																		"package": "@agentica/benchmark",
+																		"qualifiedName": "AgenticaSelectBenchmark.Model",
+																		"refersToTypeParameter": true
+																	}
+																],
+																"name": "IAgenticaSelectBenchmarkEvent",
+																"package": "@agentica/benchmark"
+															}
+														}
+													],
+													"type": {
+														"type": "intrinsic",
+														"name": "void"
+													}
+												}
+											]
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib/lib.es5.d.ts",
+									"qualifiedName": "Promise"
+								},
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../packages/benchmark/src/structures/IAgenticaSelectBenchmarkResult.ts",
+											"qualifiedName": "IAgenticaSelectBenchmarkResult"
+										},
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": 35,
+												"name": "Model",
+												"package": "@agentica/benchmark",
+												"qualifiedName": "AgenticaSelectBenchmark.Model",
+												"refersToTypeParameter": true
+											}
+										],
+										"name": "IAgenticaSelectBenchmarkResult",
+										"package": "@agentica/benchmark"
+									}
+								],
+								"name": "Promise",
+								"package": "typescript"
+							}
+						}
+					]
+				},
+				{
+					"id": 48,
+					"name": "report",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {
+						"isPublic": true
+					},
+					"sources": [
+						{
+							"fileName": "AgenticaSelectBenchmark.ts",
+							"line": 144,
+							"character": 9,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaSelectBenchmark.ts#L144"
+						}
+					],
+					"signatures": [
+						{
+							"id": 49,
+							"name": "report",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Report the benchmark result as markdown files.\r\n\r\nReport the benchmark result "
+									},
+									{
+										"kind": "inline-tag",
+										"tag": "@link",
+										"text": "execute",
+										"target": 42
+									},
+									{
+										"kind": "text",
+										"text": "d by\r\n"
+									},
+									{
+										"kind": "code",
+										"text": "`AgenticaSelectBenchmark`"
+									},
+									{
+										"kind": "text",
+										"text": " as markdown files, and returns a\r\ndictionary object of the markdown reporting files. The key of\r\nthe dictionary would be file name, and the value would be the\r\nmarkdown content.\r\n\r\nFor reference, the markdown files are composed like below:\r\n\r\n- "
+									},
+									{
+										"kind": "code",
+										"text": "`./README.md`"
+									},
+									{
+										"kind": "text",
+										"text": "\r\n- "
+									},
+									{
+										"kind": "code",
+										"text": "`./scenario-1/README.md`"
+									},
+									{
+										"kind": "text",
+										"text": "\r\n- "
+									},
+									{
+										"kind": "code",
+										"text": "`./scenario-1/1.success.md`"
+									},
+									{
+										"kind": "text",
+										"text": "\r\n- "
+									},
+									{
+										"kind": "code",
+										"text": "`./scenario-1/2.failure.md`"
+									},
+									{
+										"kind": "text",
+										"text": "\r\n- "
+									},
+									{
+										"kind": "code",
+										"text": "`./scenario-1/3.error.md`"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "Dictionary of markdown files."
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "AgenticaSelectBenchmark.ts",
+									"line": 144,
+									"character": 9,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaSelectBenchmark.ts#L144"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib/lib.es5.d.ts",
+									"qualifiedName": "Record"
+								},
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								],
+								"name": "Record",
+								"package": "typescript"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"children": [
+						33
+					]
+				},
+				{
+					"title": "Methods",
+					"children": [
+						42,
+						48
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "AgenticaSelectBenchmark.ts",
+					"line": 45,
+					"character": 13,
+					"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaSelectBenchmark.ts#L45"
+				},
+				{
+					"fileName": "AgenticaSelectBenchmark.ts",
+					"line": 230,
+					"character": 17,
+					"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/AgenticaSelectBenchmark.ts#L230"
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 53,
+					"name": "Model",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../node_modules/.pnpm/@samchon+openapi@4.3.3/node_modules/@samchon/openapi/lib/structures/ILlmSchema.d.ts",
+							"qualifiedName": "ILlmSchema.Model"
+						},
+						"name": "ILlmSchema.Model",
+						"package": "@samchon/openapi"
+					}
+				}
+			]
+		},
+		{
+			"id": 63,
+			"name": "MicroAgenticaCallBenchmark",
+			"variant": "declaration",
+			"kind": 128,
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "LLM function calling selection benchmark.\r\n\r\n"
+					},
+					{
+						"kind": "code",
+						"text": "`AgenticaCallBenchmark`"
+					},
+					{
+						"kind": "text",
+						"text": " is a class for the benchmark of the\r\nLLM (Large Model Language) function calling part. It utilizes both\r\n"
+					},
+					{
+						"kind": "code",
+						"text": "`selector`"
+					},
+					{
+						"kind": "text",
+						"text": " and "
+					},
+					{
+						"kind": "code",
+						"text": "`caller`"
+					},
+					{
+						"kind": "text",
+						"text": " agents and tests whether the expected\r\n"
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "IAgenticaOperation operations"
+					},
+					{
+						"kind": "text",
+						"text": " are properly selected and\r\ncalled from the given\r\n"
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "IAgenticaCallBenchmarkScenario scenarios",
+						"target": {
+							"sourceFileName": "../packages/benchmark/src/structures/IAgenticaCallBenchmarkScenario.ts",
+							"qualifiedName": "IAgenticaCallBenchmarkScenario"
+						},
+						"tsLinkText": "scenarios"
+					},
+					{
+						"kind": "text",
+						"text": ".\r\n\r\nNote that, this "
+					},
+					{
+						"kind": "code",
+						"text": "`MicroAgenticaCallBenchmark`"
+					},
+					{
+						"kind": "text",
+						"text": " consumes a lot of time and\r\nLLM token costs because it needs the whole process of the\r\n"
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "MicroAgentica",
+						"target": {
+							"sourceFileName": "../packages/core/src/MicroAgentica.ts",
+							"qualifiedName": "MicroAgentica"
+						}
+					},
+					{
+						"kind": "text",
+						"text": " class with a lot of repetitions. If you don't want\r\nsuch a heavy benchmark, consider to using\r\n"
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "AgenticaSelectBenchmark",
+						"target": 54
+					},
+					{
+						"kind": "text",
+						"text": " instead. In my experience,\r\n"
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "MicroAgentica",
+						"target": {
+							"sourceFileName": "../packages/core/src/MicroAgentica.ts",
+							"qualifiedName": "MicroAgentica"
+						}
+					},
+					{
+						"kind": "text",
+						"text": " does not fail to function calling, so the function\r\nselection benchmark is much economical."
+					}
+				],
+				"blockTags": [
+					{
+						"tag": "@author",
+						"content": [
+							{
+								"kind": "text",
+								"text": "Samchon"
+							}
+						]
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 64,
+					"name": "constructor",
+					"variant": "declaration",
+					"kind": 512,
+					"flags": {
+						"isPublic": true
+					},
+					"sources": [
+						{
+							"fileName": "MicroAgenticaCallBenchmark.ts",
+							"line": 52,
+							"character": 2,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/MicroAgenticaCallBenchmark.ts#L52"
+						}
+					],
+					"signatures": [
+						{
+							"id": 65,
+							"name": "MicroAgenticaCallBenchmark",
+							"variant": "signature",
+							"kind": 16384,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Initializer Constructor."
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "MicroAgenticaCallBenchmark.ts",
+									"line": 52,
+									"character": 2,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/MicroAgenticaCallBenchmark.ts#L52"
+								}
+							],
+							"typeParameters": [
+								{
+									"id": 66,
+									"name": "Model",
+									"variant": "typeParam",
+									"kind": 131072,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/@samchon+openapi@4.3.3/node_modules/@samchon/openapi/lib/structures/ILlmSchema.d.ts",
+											"qualifiedName": "ILlmSchema.Model"
+										},
+										"name": "Model",
+										"package": "@samchon/openapi",
+										"qualifiedName": "ILlmSchema.Model"
+									}
+								}
+							],
+							"parameters": [
+								{
+									"id": 67,
+									"name": "props",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "Properties of the selection benchmark"
+											}
+										]
+									},
+									"type": {
+										"type": "reference",
+										"target": 85,
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": 66,
+												"name": "Model",
+												"package": "@agentica/benchmark",
+												"qualifiedName": "MicroAgenticaCallBenchmark.Model",
+												"refersToTypeParameter": true
+											}
+										],
+										"name": "IProps",
+										"package": "@agentica/benchmark",
+										"qualifiedName": "MicroAgenticaCallBenchmark.IProps"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 63,
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": 66,
+										"name": "Model",
+										"package": "@agentica/benchmark",
+										"qualifiedName": "MicroAgenticaCallBenchmark.Model",
+										"refersToTypeParameter": true
+									}
+								],
+								"name": "MicroAgenticaCallBenchmark",
+								"package": "@agentica/benchmark"
+							}
+						}
+					]
+				},
+				{
+					"id": 72,
+					"name": "execute",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {
+						"isPublic": true
+					},
+					"sources": [
+						{
+							"fileName": "MicroAgenticaCallBenchmark.ts",
+							"line": 79,
+							"character": 15,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/MicroAgenticaCallBenchmark.ts#L79"
+						}
+					],
+					"signatures": [
+						{
+							"id": 73,
+							"name": "execute",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Execute the benchmark.\r\n\r\nExecute the benchmark of the LLM function calling, and returns\r\nthe result of the benchmark.\r\n\r\nIf you wanna see progress of the benchmark, you can pass a callback\r\nfunction as the argument of the "
+									},
+									{
+										"kind": "code",
+										"text": "`listener`"
+									},
+									{
+										"kind": "text",
+										"text": ". The callback function\r\nwould be called whenever a benchmark event is occurred.\r\n\r\nAlso, you can publish a markdown format report by calling\r\nthe "
+									},
+									{
+										"kind": "inline-tag",
+										"tag": "@link",
+										"text": "report",
+										"target": 78
+									},
+									{
+										"kind": "text",
+										"text": " function after the benchmark execution."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "Results of the function calling benchmark"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "MicroAgenticaCallBenchmark.ts",
+									"line": 79,
+									"character": 15,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/MicroAgenticaCallBenchmark.ts#L79"
+								}
+							],
+							"parameters": [
+								{
+									"id": 74,
+									"name": "listener",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {
+										"isOptional": true
+									},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "Callback function listening the benchmark events"
+											}
+										]
+									},
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 75,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "MicroAgenticaCallBenchmark.ts",
+													"line": 80,
+													"character": 15,
+													"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/MicroAgenticaCallBenchmark.ts#L80"
+												}
+											],
+											"signatures": [
+												{
+													"id": 76,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "MicroAgenticaCallBenchmark.ts",
+															"line": 80,
+															"character": 15,
+															"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/MicroAgenticaCallBenchmark.ts#L80"
+														}
+													],
+													"parameters": [
+														{
+															"id": 77,
+															"name": "event",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "reference",
+																"target": {
+																	"sourceFileName": "../packages/benchmark/src/structures/IAgenticaCallBenchmarkEvent.ts",
+																	"qualifiedName": "IAgenticaCallBenchmarkEvent"
+																},
+																"typeArguments": [
+																	{
+																		"type": "reference",
+																		"target": 66,
+																		"name": "Model",
+																		"package": "@agentica/benchmark",
+																		"qualifiedName": "MicroAgenticaCallBenchmark.Model",
+																		"refersToTypeParameter": true
+																	}
+																],
+																"name": "IAgenticaCallBenchmarkEvent",
+																"package": "@agentica/benchmark"
+															}
+														}
+													],
+													"type": {
+														"type": "intrinsic",
+														"name": "void"
+													}
+												}
+											]
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib/lib.es5.d.ts",
+									"qualifiedName": "Promise"
+								},
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../packages/benchmark/src/structures/IAgenticaCallBenchmarkResult.ts",
+											"qualifiedName": "IAgenticaCallBenchmarkResult"
+										},
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": 66,
+												"name": "Model",
+												"package": "@agentica/benchmark",
+												"qualifiedName": "MicroAgenticaCallBenchmark.Model",
+												"refersToTypeParameter": true
+											}
+										],
+										"name": "IAgenticaCallBenchmarkResult",
+										"package": "@agentica/benchmark"
+									}
+								],
+								"name": "Promise",
+								"package": "typescript"
+							}
+						}
+					]
+				},
+				{
+					"id": 78,
+					"name": "report",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {
+						"isPublic": true
+					},
+					"sources": [
+						{
+							"fileName": "MicroAgenticaCallBenchmark.ts",
+							"line": 139,
+							"character": 9,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/MicroAgenticaCallBenchmark.ts#L139"
+						}
+					],
+					"signatures": [
+						{
+							"id": 79,
+							"name": "report",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Report the benchmark result as markdown files.\r\n\r\nReport the benchmark result "
+									},
+									{
+										"kind": "inline-tag",
+										"tag": "@link",
+										"text": "execute",
+										"target": 72
+									},
+									{
+										"kind": "text",
+										"text": "d by\r\n"
+									},
+									{
+										"kind": "code",
+										"text": "`AgenticaCallBenchmark`"
+									},
+									{
+										"kind": "text",
+										"text": " as markdown files, and returns a dictionary\r\nobject of the markdown reporting files. The key of the dictionary\r\nwould be file name, and the value would be the markdown content.\r\n\r\nFor reference, the markdown files are composed like below:\r\n\r\n- "
+									},
+									{
+										"kind": "code",
+										"text": "`./README.md`"
+									},
+									{
+										"kind": "text",
+										"text": "\r\n- "
+									},
+									{
+										"kind": "code",
+										"text": "`./scenario-1/README.md`"
+									},
+									{
+										"kind": "text",
+										"text": "\r\n- "
+									},
+									{
+										"kind": "code",
+										"text": "`./scenario-1/1.success.md`"
+									},
+									{
+										"kind": "text",
+										"text": "\r\n- "
+									},
+									{
+										"kind": "code",
+										"text": "`./scenario-1/2.failure.md`"
+									},
+									{
+										"kind": "text",
+										"text": "\r\n- "
+									},
+									{
+										"kind": "code",
+										"text": "`./scenario-1/3.error.md`"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "Dictionary of markdown files."
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "MicroAgenticaCallBenchmark.ts",
+									"line": 139,
+									"character": 9,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/MicroAgenticaCallBenchmark.ts#L139"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib/lib.es5.d.ts",
+									"qualifiedName": "Record"
+								},
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								],
+								"name": "Record",
+								"package": "typescript"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"children": [
+						64
+					]
+				},
+				{
+					"title": "Methods",
+					"children": [
+						72,
+						78
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "MicroAgenticaCallBenchmark.ts",
+					"line": 41,
+					"character": 13,
+					"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/MicroAgenticaCallBenchmark.ts#L41"
+				},
+				{
+					"fileName": "MicroAgenticaCallBenchmark.ts",
+					"line": 215,
+					"character": 17,
+					"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/benchmark/src/MicroAgenticaCallBenchmark.ts#L215"
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 83,
+					"name": "Model",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../node_modules/.pnpm/@samchon+openapi@4.3.3/node_modules/@samchon/openapi/lib/structures/ILlmSchema.d.ts",
+							"qualifiedName": "ILlmSchema.Model"
+						},
+						"name": "ILlmSchema.Model",
+						"package": "@samchon/openapi"
+					}
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Namespaces",
+			"children": [
+				22,
+				54,
+				84
+			]
+		},
+		{
+			"title": "Classes",
+			"children": [
+				1,
+				32,
+				63
+			]
+		}
+	],
+	"packageName": "@agentica/benchmark",
+	"readme": [
+		{
+			"kind": "text",
+			"text": "# Agentica, AI Function Calling Framework\n\n![Agentica - ReadMe Diagram](https://github.com/user-attachments/assets/ecd06d51-b818-41c8-ab31-f0e40f48034e)\n\n<!-- Github/NPM Badges -->\n<p align=\"center\">\n  <a href=\"https://github.com/wrtnlabs/agentica/blob/master/LICENSE\"><img src=\"https://img.shields.io/badge/license-MIT-blue.svg\" alt=\"MIT License\"/></a>\n  <a href=\"https://www.npmjs.com/package/@agentica/core\"><img src=\"https://img.shields.io/npm/v/@agentica/core.svg\" alt=\"NPM Version\"/></a>\n  <a href=\"https://www.npmjs.com/package/@agentica/core\"><img src=\"https://img.shields.io/npm/dm/@agentica/core.svg\" alt=\"NPM Downloads\"/></a>\n  <a href=\"https://dormoshe.io/newsletters/373\"><img src=\"https://img.shields.io/badge/DorMoshe%20Newsletter-Top%20%236%20of%201K-orange?style=flat&logo=rss\" alt=\"Newsletter Top #6\"/></a>\n <a href=\"https://github.com/wrtnlabs/agentica/actions?query=workflow%3Abuild\"><img src=\"https://github.com/wrtnlabs/agentica/workflows/build/badge.svg\" alt=\"Build Status\"/></a>\n</p>\n\n<!-- Youtube + Discord -->\n<p align=\"center\">\n  <a href=\"https://www.youtube.com/@wrtnlabs\">\n    <img src=\"https://img.shields.io/badge/YouTube%20Tutorial-0d1117?style=social&logo=youtube\" alt=\"YouTube\"/>\n  </a>\n  &nbsp;\n  <a href=\"https://discord.gg/aMhRmzkqCx\">\n    <img src=\"https://img.shields.io/badge/Discord-0d1117?style=social&logo=discord\" alt=\"Discord\"/>\n  </a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://www.bloomberg.com/news/videos/2025-03-31/wtrn-on-series-b-funding-growth-strategy-video\">\n    <img src=\"https://wrtnlabs.io/agentica/images/badges/fund-raising-news-202503.svg\" />\n  </a>\n  &nbsp;&nbsp;\n  <a href=\"https://github.com/wrtnlabs\">\n    <img src=\"https://wrtnlabs.io/agentica/images/badges/open-source-mission.svg\" />\n  </a>\n</p>\n\nAgentic AI framework specialized in AI Function Calling.\n\nDon't be afraid of AI agent development. Just list functions from three protocols below. This is everything you should do for AI agent development.\n\n- TypeScript Class\n- Swagger/OpenAPI Document\n- MCP (Model Context Protocol) Server\n\nWanna make an e-commerce agent? Bring in e-commerce functions. Need a newspaper agent? Get API functions from the newspaper company. Just prepare any functions that you need, then it becomes an AI agent.\n\nAre you a TypeScript developer? Then you're already an AI developer. Familiar with backend development? You're already well-versed in AI development. Anyone who can make functions can make AI agents.\n\n<!-- eslint-skip -->\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```typescript\n\nimport { Agentica, assertHttpController } from \"@agentica/core\";\nimport OpenAI from \"openai\";\nimport typia from \"typia\";\n\nimport { MobileFileSystem } from \"./services/MobileFileSystem\";\n\nconst agent = new Agentica({\n  vendor: {\n    api: new OpenAI({ apiKey: \"********\" }),\n    model: \"gpt-4o-mini\",\n  },\n  controllers: [\n    // functions from TypeScript class\n    typia.llm.controller<MobileFileSystem, \"chatgpt\">(\n      \"filesystem\",\n      MobileFileSystem(),\n    ),\n    // functions from Swagger/OpenAPI\n    assertHttpController({\n      name: \"shopping\",\n      model: \"chatgpt\",\n      document: await fetch(\n        \"https://shopping-be.wrtn.ai/editor/swagger.json\",\n      ).then(r => r.json()),\n      connection: {\n        host: \"https://shopping-be.wrtn.ai\",\n        headers: { Authorization: \"Bearer ********\" },\n      },\n    }),\n  ],\n});\nawait agent.conversate(\"I wanna buy MacBook Pro\");\n\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n## 📦 Setup\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```bash\n$ npx agentica start <directory>\n\n----------------------------------------\n Agentica Setup Wizard\n----------------------------------------\n? Package Manager (use arrow keys)\n  > npm\n    pnpm\n    yarn (berry is not supported)\n? Project Type\n    NodeJS Agent Server\n  > NestJS Agent Server\n    React Client Application\n    Standalone Application\n? Embedded Controllers (multi-selectable)\n    (none)\n    Google Calendar\n    Google News\n  > Github\n    Reddit\n    Slack\n    ...\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\nThe setup wizard helps you create a new project tailored to your needs.\n\nFor reference, when selecting a project type, any option other than \"Standalone Application\" will implement the [WebSocket Protocol](https://wrtnlabs.io/agentica/docs/websocket/) for client-server communication.\n\nFor comprehensive setup instructions, visit our [Getting Started](https://wrtnlabs.io/agentica/docs/) guide.\n\n## 💻 Playground\n\nExperience Agentica firsthand through our [interactive playground](https://wrtnlabs.io/agentica/playground) before installing.\n\nOur demonstrations showcase the power and simplicity of Agentica's function calling capabilities across different integration methods.\n\n- [TypeScript Class](https://wrtnlabs.io/agentica/playground/bbs)\n- [Swagger/OpenAPI Document](https://wrtnlabs.io/agentica/playground/uploader)\n- [Enterprise E-commerce Agent](https://wrtnlabs.io/agentica/playground/shopping)\n\n![E-commerce Agent Demo](https://github.com/user-attachments/assets/fbfa9f93-304c-4728-933e-deb8ecd7a2af)\n\n<!--\n@todo this section would be changed after making tutorial playground\n-->\n\n## 📚 Documentation Resources\n\nFind comprehensive resources at our [official website](https://wrtnlabs.io/agentica).\n\n- [Home](https://wrtnlabs.io/agentica)\n- [Guide Documents](https://wrtnlabs.io/agentica/docs)\n  - [Setup](https://wrtnlabs.io/agentica/docs/setup/cli/)\n  - [Concepts](https://wrtnlabs.io/agentica/docs/concepts/function-calling/)\n  - [Core Library](https://wrtnlabs.io/agentica/docs/core/)\n  - [WebSocket Protocol](https://wrtnlabs.io/agentica/docs/websocket/)\n  - [Plugin Modules](https://wrtnlabs.io/agentica/docs/plugins/benchmark/)\n- [Tutorial](https://wrtnlabs.io/agentica/tutorial)\n  - [Productivity](https://wrtnlabs.io/agentica/tutorial/productivity/arxiv/)\n  - [Coding](https://wrtnlabs.io/agentica/tutorial/coding/file-system/)\n  - [React Native](https://wrtnlabs.io/agentica/tutorial/react-native/sms/)\n  - [Enterprise](https://wrtnlabs.io/agentica/tutorial/enterprise/shopping/)\n- [API Documents](https://wrtnlabs.io/agentica/api)\n- [Youtube](https://www.youtube.com/@wrtnlabs)\n- [Paper](https://wrtnlabs.io/agentica/paper)\n\nhttps://github.com/user-attachments/assets/2f2a4cdc-6cf1-4304-b82d-04a8ed0be0dd\n\n> Tutorial Videos: https://www.youtube.com/@wrtnlabs\n\n## 🌟 Why Agentica?\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```mermaid\nflowchart\n  subgraph \"JSON Schema Specification\"\n    schemav4(\"JSON Schema v4 ~ v7\") --upgrades--> emended[[\"OpenAPI v3.1 (emended)\"]]\n    schema2910(\"JSON Schema 2019-03\") --upgrades--> emended\n    schema2020(\"JSON Schema 2020-12\") --emends--> emended\n  end\n  subgraph \"Agentica\"\n    emended --\"Artificial Intelligence\"--> fc{{\"AI Function Calling\"}}\n    fc --\"OpenAI\"--> chatgpt(\"ChatGPT\")\n    fc --\"Google\"--> gemini(\"Gemini\")\n    fc --\"Anthropic\"--> claude(\"Claude\")\n    fc --\"High-Flyer\"--> deepseek(\"DeepSeek\")\n    fc --\"Meta\"--> llama(\"Llama\")\n    chatgpt --\"3.1\"--> custom([\"Custom JSON Schema\"])\n    gemini --\"3.0\"--> custom([\"Custom JSON Schema\"])\n    claude --\"3.1\"--> standard([\"Standard JSON Schema\"])\n    deepseek --\"3.1\"--> standard\n    llama --\"3.1\"--> standard\n  end\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\nAgentica enhances AI function calling by the following strategies:\n\n- [**Compiler Driven Development**](https://wrtnlabs.io/agentica/docs/concepts/compiler-driven-development): constructs function calling schema automatically by compiler skills without hand-writing.\n- [**JSON Schema Conversion**](https://wrtnlabs.io/agentica/docs/core/vendor/#schema-specification): automatically handles specification differences between LLM vendors, ensuring seamless integration regardless of your chosen AI model.\n- [**Validation Feedback**](https://wrtnlabs.io/agentica/docs/concepts/function-calling#validation-feedback): detects and corrects AI mistakes in argument composition, dramatically reducing errors and improving reliability.\n- [**Selector Agent**](https://wrtnlabs.io/agentica/docs/concepts/function-calling#orchestration-strategy): filtering candidate functions to minimize context usage, optimize performance, and reduce token consumption.\n\nThanks to these innovations, Agentica makes AI function calling easier, safer, and more accurate than before. Development becomes more intuitive since you only need to prepare functions relevant to your specific use case, and scaling your agent's capabilities is as simple as adding or removing functions.\n\nIn 2023, when OpenAI announced function calling, many predicted that function calling-driven AI development would become the mainstream. However, in reality, due to the difficulty and instability of function calling, the trend in AI development became agent workflow. Agent workflow, which is inflexible and must be created for specific purposes, has conquered the AI agent ecosystem.\n\nBy the way, as Agentica has resolved the difficulty and instability problems of function calling, the time has come to embrace function-driven AI development once again.\n\n| Type        | Workflow      | Vanilla Function Calling | Agentica Function Calling |\n| ----------- | ------------- | ------------------------ | ------------------------- |\n| Purpose     | ❌ Specific   | 🟢 General               | 🟢 General                |\n| Difficulty  | ❌ Difficult  | ❌ Difficult             | 🟢 Easy                   |\n| Stability   | 🟢 Stable     | ❌ Unstable              | 🟢 Stable                 |\n| Flexibility | ❌ Inflexible | 🟢 Flexible              | 🟢 Flexible               |\n\n## 💬 Community & Support\n\nFor support, questions, or to provide feedback, join our Discord community:\n\n[![Discord](https://dcbadge.limes.pink/api/server/https://discord.gg/aMhRmzkqCx)](https://discord.gg/aMhRmzkqCx)\n\n## ⚖️ License\n\nAgentica is open-source and available under the [MIT License](https://github.com/wrtnlabs/agentica/blob/master/LICENSE).\n\n<p align=\"center\">\n  <img src=\"https://github.com/user-attachments/assets/ecd0b82e-bfb7-4eb5-ae97-75be0cb22f10\" alt=\"Wrtn Labs Logo\" />\n</p>\n<div align=\"center\">\n  Agentica is maintained by <a href=\"https://wrtnlabs.io\">Wrtn Technologies</a> &mdash; Empowering developers to transform TypeScript functions and OpenAPI specs into powerful AI agents.\n</div>"
+		}
+	],
+	"symbolIdMap": {
+		"0": {
+			"sourceFileName": "../packages/benchmark/src/index.ts",
+			"qualifiedName": ""
+		},
+		"1": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaCallBenchmark.ts",
+			"qualifiedName": "AgenticaCallBenchmark"
+		},
+		"2": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaCallBenchmark.ts",
+			"qualifiedName": "AgenticaCallBenchmark.__constructor"
+		},
+		"3": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaCallBenchmark.ts",
+			"qualifiedName": "AgenticaCallBenchmark"
+		},
+		"4": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaCallBenchmark.ts",
+			"qualifiedName": "AgenticaCallBenchmark.Model"
+		},
+		"5": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaCallBenchmark.ts",
+			"qualifiedName": "props"
+		},
+		"10": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaCallBenchmark.ts",
+			"qualifiedName": "AgenticaCallBenchmark.execute"
+		},
+		"11": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaCallBenchmark.ts",
+			"qualifiedName": "AgenticaCallBenchmark.execute"
+		},
+		"12": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaCallBenchmark.ts",
+			"qualifiedName": "listener"
+		},
+		"13": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaCallBenchmark.ts",
+			"qualifiedName": "__type"
+		},
+		"14": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaCallBenchmark.ts",
+			"qualifiedName": "__type"
+		},
+		"15": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaCallBenchmark.ts",
+			"qualifiedName": "event"
+		},
+		"16": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaCallBenchmark.ts",
+			"qualifiedName": "AgenticaCallBenchmark.report"
+		},
+		"17": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaCallBenchmark.ts",
+			"qualifiedName": "AgenticaCallBenchmark.report"
+		},
+		"21": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaCallBenchmark.ts",
+			"qualifiedName": "AgenticaCallBenchmark.Model"
+		},
+		"22": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaCallBenchmark.ts",
+			"qualifiedName": "AgenticaCallBenchmark"
+		},
+		"23": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaCallBenchmark.ts",
+			"qualifiedName": "AgenticaCallBenchmark.IProps"
+		},
+		"24": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaCallBenchmark.ts",
+			"qualifiedName": "AgenticaCallBenchmark.IProps.agent"
+		},
+		"25": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaCallBenchmark.ts",
+			"qualifiedName": "AgenticaCallBenchmark.IProps.scenarios"
+		},
+		"26": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaCallBenchmark.ts",
+			"qualifiedName": "AgenticaCallBenchmark.IProps.config"
+		},
+		"27": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaCallBenchmark.ts",
+			"qualifiedName": "AgenticaCallBenchmark.IProps.Model"
+		},
+		"28": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaCallBenchmark.ts",
+			"qualifiedName": "AgenticaCallBenchmark.IConfig"
+		},
+		"29": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaCallBenchmark.ts",
+			"qualifiedName": "AgenticaCallBenchmark.IConfig.repeat"
+		},
+		"30": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaCallBenchmark.ts",
+			"qualifiedName": "AgenticaCallBenchmark.IConfig.simultaneous"
+		},
+		"31": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaCallBenchmark.ts",
+			"qualifiedName": "AgenticaCallBenchmark.IConfig.consent"
+		},
+		"32": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaSelectBenchmark.ts",
+			"qualifiedName": "AgenticaSelectBenchmark"
+		},
+		"33": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaSelectBenchmark.ts",
+			"qualifiedName": "AgenticaSelectBenchmark.__constructor"
+		},
+		"34": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaSelectBenchmark.ts",
+			"qualifiedName": "AgenticaSelectBenchmark"
+		},
+		"35": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaSelectBenchmark.ts",
+			"qualifiedName": "AgenticaSelectBenchmark.Model"
+		},
+		"36": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaSelectBenchmark.ts",
+			"qualifiedName": "props"
+		},
+		"42": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaSelectBenchmark.ts",
+			"qualifiedName": "AgenticaSelectBenchmark.execute"
+		},
+		"43": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaSelectBenchmark.ts",
+			"qualifiedName": "AgenticaSelectBenchmark.execute"
+		},
+		"44": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaSelectBenchmark.ts",
+			"qualifiedName": "listener"
+		},
+		"45": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaSelectBenchmark.ts",
+			"qualifiedName": "__type"
+		},
+		"46": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaSelectBenchmark.ts",
+			"qualifiedName": "__type"
+		},
+		"47": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaSelectBenchmark.ts",
+			"qualifiedName": "event"
+		},
+		"48": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaSelectBenchmark.ts",
+			"qualifiedName": "AgenticaSelectBenchmark.report"
+		},
+		"49": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaSelectBenchmark.ts",
+			"qualifiedName": "AgenticaSelectBenchmark.report"
+		},
+		"53": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaSelectBenchmark.ts",
+			"qualifiedName": "AgenticaSelectBenchmark.Model"
+		},
+		"54": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaSelectBenchmark.ts",
+			"qualifiedName": "AgenticaSelectBenchmark"
+		},
+		"55": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaSelectBenchmark.ts",
+			"qualifiedName": "AgenticaSelectBenchmark.IProps"
+		},
+		"56": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaSelectBenchmark.ts",
+			"qualifiedName": "AgenticaSelectBenchmark.IProps.agent"
+		},
+		"57": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaSelectBenchmark.ts",
+			"qualifiedName": "AgenticaSelectBenchmark.IProps.scenarios"
+		},
+		"58": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaSelectBenchmark.ts",
+			"qualifiedName": "AgenticaSelectBenchmark.IProps.config"
+		},
+		"59": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaSelectBenchmark.ts",
+			"qualifiedName": "AgenticaSelectBenchmark.IProps.Model"
+		},
+		"60": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaSelectBenchmark.ts",
+			"qualifiedName": "AgenticaSelectBenchmark.IConfig"
+		},
+		"61": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaSelectBenchmark.ts",
+			"qualifiedName": "AgenticaSelectBenchmark.IConfig.repeat"
+		},
+		"62": {
+			"sourceFileName": "../packages/benchmark/src/AgenticaSelectBenchmark.ts",
+			"qualifiedName": "AgenticaSelectBenchmark.IConfig.simultaneous"
+		},
+		"63": {
+			"sourceFileName": "../packages/benchmark/src/MicroAgenticaCallBenchmark.ts",
+			"qualifiedName": "MicroAgenticaCallBenchmark"
+		},
+		"64": {
+			"sourceFileName": "../packages/benchmark/src/MicroAgenticaCallBenchmark.ts",
+			"qualifiedName": "MicroAgenticaCallBenchmark.__constructor"
+		},
+		"65": {
+			"sourceFileName": "../packages/benchmark/src/MicroAgenticaCallBenchmark.ts",
+			"qualifiedName": "MicroAgenticaCallBenchmark"
+		},
+		"66": {
+			"sourceFileName": "../packages/benchmark/src/MicroAgenticaCallBenchmark.ts",
+			"qualifiedName": "MicroAgenticaCallBenchmark.Model"
+		},
+		"67": {
+			"sourceFileName": "../packages/benchmark/src/MicroAgenticaCallBenchmark.ts",
+			"qualifiedName": "props"
+		},
+		"72": {
+			"sourceFileName": "../packages/benchmark/src/MicroAgenticaCallBenchmark.ts",
+			"qualifiedName": "MicroAgenticaCallBenchmark.execute"
+		},
+		"73": {
+			"sourceFileName": "../packages/benchmark/src/MicroAgenticaCallBenchmark.ts",
+			"qualifiedName": "MicroAgenticaCallBenchmark.execute"
+		},
+		"74": {
+			"sourceFileName": "../packages/benchmark/src/MicroAgenticaCallBenchmark.ts",
+			"qualifiedName": "listener"
+		},
+		"75": {
+			"sourceFileName": "../packages/benchmark/src/MicroAgenticaCallBenchmark.ts",
+			"qualifiedName": "__type"
+		},
+		"76": {
+			"sourceFileName": "../packages/benchmark/src/MicroAgenticaCallBenchmark.ts",
+			"qualifiedName": "__type"
+		},
+		"77": {
+			"sourceFileName": "../packages/benchmark/src/MicroAgenticaCallBenchmark.ts",
+			"qualifiedName": "event"
+		},
+		"78": {
+			"sourceFileName": "../packages/benchmark/src/MicroAgenticaCallBenchmark.ts",
+			"qualifiedName": "MicroAgenticaCallBenchmark.report"
+		},
+		"79": {
+			"sourceFileName": "../packages/benchmark/src/MicroAgenticaCallBenchmark.ts",
+			"qualifiedName": "MicroAgenticaCallBenchmark.report"
+		},
+		"83": {
+			"sourceFileName": "../packages/benchmark/src/MicroAgenticaCallBenchmark.ts",
+			"qualifiedName": "MicroAgenticaCallBenchmark.Model"
+		},
+		"84": {
+			"sourceFileName": "../packages/benchmark/src/MicroAgenticaCallBenchmark.ts",
+			"qualifiedName": "MicroAgenticaCallBenchmark"
+		},
+		"85": {
+			"sourceFileName": "../packages/benchmark/src/MicroAgenticaCallBenchmark.ts",
+			"qualifiedName": "MicroAgenticaCallBenchmark.IProps"
+		},
+		"86": {
+			"sourceFileName": "../packages/benchmark/src/MicroAgenticaCallBenchmark.ts",
+			"qualifiedName": "MicroAgenticaCallBenchmark.IProps.agent"
+		},
+		"87": {
+			"sourceFileName": "../packages/benchmark/src/MicroAgenticaCallBenchmark.ts",
+			"qualifiedName": "MicroAgenticaCallBenchmark.IProps.scenarios"
+		},
+		"88": {
+			"sourceFileName": "../packages/benchmark/src/MicroAgenticaCallBenchmark.ts",
+			"qualifiedName": "MicroAgenticaCallBenchmark.IProps.config"
+		},
+		"89": {
+			"sourceFileName": "../packages/benchmark/src/MicroAgenticaCallBenchmark.ts",
+			"qualifiedName": "MicroAgenticaCallBenchmark.IProps.Model"
+		},
+		"90": {
+			"sourceFileName": "../packages/benchmark/src/MicroAgenticaCallBenchmark.ts",
+			"qualifiedName": "MicroAgenticaCallBenchmark.IConfig"
+		},
+		"91": {
+			"sourceFileName": "../packages/benchmark/src/MicroAgenticaCallBenchmark.ts",
+			"qualifiedName": "MicroAgenticaCallBenchmark.IConfig.repeat"
+		},
+		"92": {
+			"sourceFileName": "../packages/benchmark/src/MicroAgenticaCallBenchmark.ts",
+			"qualifiedName": "MicroAgenticaCallBenchmark.IConfig.simultaneous"
+		},
+		"93": {
+			"sourceFileName": "../packages/benchmark/src/MicroAgenticaCallBenchmark.ts",
+			"qualifiedName": "MicroAgenticaCallBenchmark.IConfig.consent"
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "../packages/benchmark/src/index.ts"
+		},
+		"reflections": {
+			"1": 0
+		}
+	}
+}

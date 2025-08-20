@@ -1,0 +1,3765 @@
+{
+	"id": 0,
+	"name": "@agentica/rpc",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 13,
+			"name": "AgenticaRpcService",
+			"variant": "declaration",
+			"kind": 4,
+			"flags": {},
+			"children": [
+				{
+					"id": 14,
+					"name": "IProps",
+					"variant": "declaration",
+					"kind": 256,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Properties of the "
+							},
+							{
+								"kind": "inline-tag",
+								"tag": "@link",
+								"text": "AgenticaRpcService",
+								"target": 1
+							},
+							{
+								"kind": "text",
+								"text": "."
+							}
+						]
+					},
+					"children": [
+						{
+							"id": 15,
+							"name": "agent",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Target agent to provide as RPC service."
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "AgenticaRpcService.ts",
+									"line": 118,
+									"character": 4,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/AgenticaRpcService.ts#L118"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../packages/core/src/Agentica.ts",
+									"qualifiedName": "Agentica"
+								},
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": 17,
+										"name": "Model",
+										"package": "@agentica/rpc",
+										"qualifiedName": "AgenticaRpcService.IProps.Model",
+										"refersToTypeParameter": true
+									}
+								],
+								"name": "Agentica",
+								"package": "@agentica/core"
+							}
+						},
+						{
+							"id": 16,
+							"name": "listener",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Listener to be binded on the agent."
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "AgenticaRpcService.ts",
+									"line": 123,
+									"character": 4,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/AgenticaRpcService.ts#L123"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 18,
+								"name": "IAgenticaRpcListener",
+								"package": "@agentica/rpc"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"children": [
+								15,
+								16
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "AgenticaRpcService.ts",
+							"line": 114,
+							"character": 19,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/AgenticaRpcService.ts#L114"
+						}
+					],
+					"typeParameters": [
+						{
+							"id": 17,
+							"name": "Model",
+							"variant": "typeParam",
+							"kind": 131072,
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../node_modules/.pnpm/@samchon+openapi@4.3.3/node_modules/@samchon/openapi/lib/structures/ILlmSchema.d.ts",
+									"qualifiedName": "ILlmSchema.Model"
+								},
+								"name": "ILlmSchema.Model",
+								"package": "@samchon/openapi"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Interfaces",
+					"children": [
+						14
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "AgenticaRpcService.ts",
+					"line": 50,
+					"character": 13,
+					"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/AgenticaRpcService.ts#L50"
+				},
+				{
+					"fileName": "AgenticaRpcService.ts",
+					"line": 110,
+					"character": 17,
+					"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/AgenticaRpcService.ts#L110"
+				}
+			]
+		},
+		{
+			"id": 93,
+			"name": "MicroAgenticaRpcService",
+			"variant": "declaration",
+			"kind": 4,
+			"flags": {},
+			"children": [
+				{
+					"id": 94,
+					"name": "IProps",
+					"variant": "declaration",
+					"kind": 256,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Properties to construct the RPC service."
+							}
+						]
+					},
+					"children": [
+						{
+							"id": 95,
+							"name": "agent",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "AI agent to be controlled."
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "MicroAgenticaRpcService.ts",
+									"line": 109,
+									"character": 4,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/MicroAgenticaRpcService.ts#L109"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../packages/core/src/MicroAgentica.ts",
+									"qualifiedName": "MicroAgentica"
+								},
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": 97,
+										"name": "Model",
+										"package": "@agentica/rpc",
+										"qualifiedName": "MicroAgenticaRpcService.IProps.Model",
+										"refersToTypeParameter": true
+									}
+								],
+								"name": "MicroAgentica",
+								"package": "@agentica/core"
+							}
+						},
+						{
+							"id": 96,
+							"name": "listener",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Listener to be notified."
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "MicroAgenticaRpcService.ts",
+									"line": 114,
+									"character": 4,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/MicroAgenticaRpcService.ts#L114"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 60,
+								"name": "IMicroAgenticaRpcListener",
+								"package": "@agentica/rpc"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"children": [
+								95,
+								96
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "MicroAgenticaRpcService.ts",
+							"line": 105,
+							"character": 19,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/MicroAgenticaRpcService.ts#L105"
+						}
+					],
+					"typeParameters": [
+						{
+							"id": 97,
+							"name": "Model",
+							"variant": "typeParam",
+							"kind": 131072,
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../node_modules/.pnpm/@samchon+openapi@4.3.3/node_modules/@samchon/openapi/lib/structures/ILlmSchema.d.ts",
+									"qualifiedName": "ILlmSchema.Model"
+								},
+								"name": "ILlmSchema.Model",
+								"package": "@samchon/openapi"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Interfaces",
+					"children": [
+						94
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "MicroAgenticaRpcService.ts",
+					"line": 50,
+					"character": 13,
+					"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/MicroAgenticaRpcService.ts#L50"
+				},
+				{
+					"fileName": "MicroAgenticaRpcService.ts",
+					"line": 101,
+					"character": 17,
+					"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/MicroAgenticaRpcService.ts#L101"
+				}
+			]
+		},
+		{
+			"id": 1,
+			"name": "AgenticaRpcService",
+			"variant": "declaration",
+			"kind": 128,
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "RPC service for the "
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "Agentica",
+						"target": {
+							"sourceFileName": "../packages/core/src/Agentica.ts",
+							"qualifiedName": "Agentica"
+						}
+					},
+					{
+						"kind": "text",
+						"text": ".\r\n\r\n"
+					},
+					{
+						"kind": "code",
+						"text": "`AgenticaRpcService`"
+					},
+					{
+						"kind": "text",
+						"text": " is class defining an AI agent service\r\nprovided from the server to clients through the RPC (Remote Procedure Call)\r\nparadigm in the websocket protocol.\r\n\r\nClient connecting to the "
+					},
+					{
+						"kind": "code",
+						"text": "`AgenticaRpcService`"
+					},
+					{
+						"kind": "text",
+						"text": " providing websocket server\r\nwill call the "
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "conversate",
+						"target": 7
+					},
+					{
+						"kind": "text",
+						"text": " function remotely through its basic\r\ninterface type "
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "IAgenticaRpcService",
+						"target": 51
+					},
+					{
+						"kind": "text",
+						"text": " with the RPC paradigm.\r\n\r\nAlso, the client provides the "
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "IAgenticaRpcListener",
+						"target": 18
+					},
+					{
+						"kind": "text",
+						"text": " type to the\r\nserver, so that "
+					},
+					{
+						"kind": "code",
+						"text": "`AgenticaRpcService`"
+					},
+					{
+						"kind": "text",
+						"text": " will remotely call the\r\n"
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "listener",
+						"target": 18,
+						"tsLinkText": "listener"
+					},
+					{
+						"kind": "text",
+						"text": "'s functions internally.\r\n\r\nYou can open the WebSocket server of the AI agent like below:\r\n\r\n"
+					},
+					{
+						"kind": "code",
+						"text": "```typescript\r\nimport {\r\n  IAgenticaRpcListener,\r\n  IAgenticaRpcService,\r\n  Agentica,\r\n  AgenticaRpcService,\r\n} from \"@agentica/core\";\r\nimport { WebSocketServer } from \"tgrid\";\r\n\r\nconst server: WebSocketServer<\r\n  null,\r\n  IAgenticaRpcService,\r\n  IAgenticaRpcListener\r\n> = new WebSocketServer();\r\nawait server.open(3001, async (acceptor) => {\r\n  await acceptor.accept(\r\n    new AgenticaRpcService({\r\n      agent: new Agentica({ ... }),\r\n      listener: acceptor.getDriver(),\r\n    }),\r\n  );\r\n});\r\n```"
+					}
+				],
+				"blockTags": [
+					{
+						"tag": "@author",
+						"content": [
+							{
+								"kind": "text",
+								"text": "Samchon"
+							}
+						]
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 2,
+					"name": "constructor",
+					"variant": "declaration",
+					"kind": 512,
+					"flags": {
+						"isPublic": true
+					},
+					"sources": [
+						{
+							"fileName": "AgenticaRpcService.ts",
+							"line": 57,
+							"character": 2,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/AgenticaRpcService.ts#L57"
+						}
+					],
+					"signatures": [
+						{
+							"id": 3,
+							"name": "AgenticaRpcService",
+							"variant": "signature",
+							"kind": 16384,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Initializer Constructor."
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "AgenticaRpcService.ts",
+									"line": 57,
+									"character": 2,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/AgenticaRpcService.ts#L57"
+								}
+							],
+							"typeParameters": [
+								{
+									"id": 4,
+									"name": "Model",
+									"variant": "typeParam",
+									"kind": 131072,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/@samchon+openapi@4.3.3/node_modules/@samchon/openapi/lib/structures/ILlmSchema.d.ts",
+											"qualifiedName": "ILlmSchema.Model"
+										},
+										"name": "Model",
+										"package": "@samchon/openapi",
+										"qualifiedName": "ILlmSchema.Model"
+									}
+								}
+							],
+							"parameters": [
+								{
+									"id": 5,
+									"name": "props",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "Properties to construct the RPC service"
+											}
+										]
+									},
+									"type": {
+										"type": "reference",
+										"target": 14,
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": 4,
+												"name": "Model",
+												"package": "@agentica/rpc",
+												"qualifiedName": "AgenticaRpcService.Model",
+												"refersToTypeParameter": true
+											}
+										],
+										"name": "IProps",
+										"package": "@agentica/rpc",
+										"qualifiedName": "AgenticaRpcService.IProps"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 1,
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": 4,
+										"name": "Model",
+										"package": "@agentica/rpc",
+										"qualifiedName": "AgenticaRpcService.Model",
+										"refersToTypeParameter": true
+									}
+								],
+								"name": "AgenticaRpcService",
+								"package": "@agentica/rpc"
+							}
+						}
+					]
+				},
+				{
+					"id": 7,
+					"name": "conversate",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {
+						"isPublic": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Conversate with the AI agent.\r\n\r\nUser talks to the AI agent with the content.\r\n\r\nWhen AI agent responds some actions like conversating or executing\r\nLLM (Large Language Model) function calling, the functions defined in the\r\n"
+							},
+							{
+								"kind": "inline-tag",
+								"tag": "@link",
+								"text": "IAgenticaRpcListener",
+								"target": 18
+							},
+							{
+								"kind": "text",
+								"text": " would be called through the RPC\r\n(Remote Procedure Call) paradigm."
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "AgenticaRpcService.ts",
+							"line": 99,
+							"character": 15,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/AgenticaRpcService.ts#L99"
+						}
+					],
+					"signatures": [
+						{
+							"id": 8,
+							"name": "conversate",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "Returned when the conversation process is completely done"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "AgenticaRpcService.ts",
+									"line": 99,
+									"character": 15,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/AgenticaRpcService.ts#L99"
+								}
+							],
+							"parameters": [
+								{
+									"id": 9,
+									"name": "content",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The content to talk"
+											}
+										]
+									},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "intrinsic",
+												"name": "string"
+											},
+											{
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../packages/core/src/histories/contents/AgenticaUserMessageContent.ts",
+													"qualifiedName": "AgenticaUserMessageContent"
+												},
+												"name": "AgenticaUserMessageContent",
+												"package": "@agentica/core"
+											},
+											{
+												"type": "array",
+												"elementType": {
+													"type": "reference",
+													"target": {
+														"sourceFileName": "../packages/core/src/histories/contents/AgenticaUserMessageContent.ts",
+														"qualifiedName": "AgenticaUserMessageContent"
+													},
+													"name": "AgenticaUserMessageContent",
+													"package": "@agentica/core"
+												}
+											}
+										]
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib/lib.es5.d.ts",
+									"qualifiedName": "Promise"
+								},
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "void"
+									}
+								],
+								"name": "Promise",
+								"package": "typescript"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"target": 52,
+								"name": "IAgenticaRpcService.conversate"
+							}
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"target": 52,
+						"name": "IAgenticaRpcService.conversate"
+					}
+				},
+				{
+					"id": 10,
+					"name": "getControllers",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {
+						"isPublic": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Get controllers.\r\n\r\nGet controllers, collection of functions that would be\r\ncalled by the AI chatbot."
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "AgenticaRpcService.ts",
+							"line": 106,
+							"character": 15,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/AgenticaRpcService.ts#L106"
+						}
+					],
+					"signatures": [
+						{
+							"id": 11,
+							"name": "getControllers",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [],
+								"blockTags": [
+									{
+										"tag": "@inheritDoc",
+										"content": []
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "AgenticaRpcService.ts",
+									"line": 106,
+									"character": 15,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/AgenticaRpcService.ts#L106"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib/lib.es5.d.ts",
+									"qualifiedName": "Promise"
+								},
+								"typeArguments": [
+									{
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"target": {
+												"sourceFileName": "../packages/core/src/structures/IAgenticaController.ts",
+												"qualifiedName": "IAgenticaController"
+											},
+											"typeArguments": [
+												{
+													"type": "reference",
+													"target": 4,
+													"name": "Model",
+													"package": "@agentica/rpc",
+													"qualifiedName": "AgenticaRpcService.Model",
+													"refersToTypeParameter": true
+												}
+											],
+											"name": "IAgenticaController",
+											"package": "@agentica/core"
+										}
+									}
+								],
+								"name": "Promise",
+								"package": "typescript"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"target": 56,
+								"name": "IAgenticaRpcService.getControllers"
+							}
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"target": 56,
+						"name": "IAgenticaRpcService.getControllers"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"children": [
+						2
+					]
+				},
+				{
+					"title": "Methods",
+					"children": [
+						7,
+						10
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "AgenticaRpcService.ts",
+					"line": 50,
+					"character": 13,
+					"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/AgenticaRpcService.ts#L50"
+				},
+				{
+					"fileName": "AgenticaRpcService.ts",
+					"line": 110,
+					"character": 17,
+					"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/AgenticaRpcService.ts#L110"
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 12,
+					"name": "Model",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../node_modules/.pnpm/@samchon+openapi@4.3.3/node_modules/@samchon/openapi/lib/structures/ILlmSchema.d.ts",
+							"qualifiedName": "ILlmSchema.Model"
+						},
+						"name": "ILlmSchema.Model",
+						"package": "@samchon/openapi"
+					}
+				}
+			],
+			"implementedTypes": [
+				{
+					"type": "reference",
+					"target": 51,
+					"typeArguments": [
+						{
+							"type": "reference",
+							"target": 4,
+							"name": "Model",
+							"package": "@agentica/rpc",
+							"qualifiedName": "AgenticaRpcService.Model",
+							"refersToTypeParameter": true
+						}
+					],
+					"name": "IAgenticaRpcService",
+					"package": "@agentica/rpc"
+				}
+			]
+		},
+		{
+			"id": 81,
+			"name": "MicroAgenticaRpcService",
+			"variant": "declaration",
+			"kind": 128,
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "RPC service for the "
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "MicroAgentica",
+						"target": {
+							"sourceFileName": "../packages/core/src/MicroAgentica.ts",
+							"qualifiedName": "MicroAgentica"
+						}
+					},
+					{
+						"kind": "text",
+						"text": ".\r\n\r\n"
+					},
+					{
+						"kind": "code",
+						"text": "`MicroAgenticaRpcService`"
+					},
+					{
+						"kind": "text",
+						"text": " is class defining an AI agent service\r\nprovided from the server to clients through the RPC (Remote Procedure Call)\r\nparadigm in the websocket protocol.\r\n\r\nClient connecting to the "
+					},
+					{
+						"kind": "code",
+						"text": "`MicroAgenticaRpcService`"
+					},
+					{
+						"kind": "text",
+						"text": " providing websocket server\r\nwill call the "
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "conversate",
+						"target": 87
+					},
+					{
+						"kind": "text",
+						"text": " function remotely through its basic\r\ninterface type "
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "IAgenticaRpcService",
+						"target": 51
+					},
+					{
+						"kind": "text",
+						"text": " with the RPC paradigm.\r\n\r\nAlso, the client provides the "
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "IMicroAgenticaRpcListener",
+						"target": 60
+					},
+					{
+						"kind": "text",
+						"text": " type to the\r\nserver, so that "
+					},
+					{
+						"kind": "code",
+						"text": "`MicroAgenticaRpcService`"
+					},
+					{
+						"kind": "text",
+						"text": " will remotely call the\r\n"
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "listener",
+						"target": 60,
+						"tsLinkText": "listener"
+					},
+					{
+						"kind": "text",
+						"text": "'s functions internally.\r\n\r\nYou can open the WebSocket server of the AI agent like below:\r\n\r\n"
+					},
+					{
+						"kind": "code",
+						"text": "```typescript\r\nimport {\r\n  IMicroAgenticaRpcListener,\r\n  IAgenticaRpcService,\r\n  Agentica,\r\n  MicroAgenticaRpcService,\r\n} from \"@agentica/core\";\r\nimport { WebSocketServer } from \"tgrid\";\r\n\r\nconst server: WebSocketServer<\r\n  null,\r\n  IAgenticaRpcService,\r\n  IMicroAgenticaRpcListener\r\n> = new WebSocketServer();\r\nawait server.open(3001, async (acceptor) => {\r\n  await acceptor.accept(\r\n    new MicroAgenticaRpcService({\r\n      agent: new MicroAgentica({ ... }),\r\n      listener: acceptor.getDriver(),\r\n    }),\r\n  );\r\n});\r\n```"
+					}
+				],
+				"blockTags": [
+					{
+						"tag": "@author",
+						"content": [
+							{
+								"kind": "text",
+								"text": "Samchon"
+							}
+						]
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 82,
+					"name": "constructor",
+					"variant": "declaration",
+					"kind": 512,
+					"flags": {
+						"isPublic": true
+					},
+					"sources": [
+						{
+							"fileName": "MicroAgenticaRpcService.ts",
+							"line": 57,
+							"character": 2,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/MicroAgenticaRpcService.ts#L57"
+						}
+					],
+					"signatures": [
+						{
+							"id": 83,
+							"name": "MicroAgenticaRpcService",
+							"variant": "signature",
+							"kind": 16384,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Initializer Constructor."
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "MicroAgenticaRpcService.ts",
+									"line": 57,
+									"character": 2,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/MicroAgenticaRpcService.ts#L57"
+								}
+							],
+							"typeParameters": [
+								{
+									"id": 84,
+									"name": "Model",
+									"variant": "typeParam",
+									"kind": 131072,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/@samchon+openapi@4.3.3/node_modules/@samchon/openapi/lib/structures/ILlmSchema.d.ts",
+											"qualifiedName": "ILlmSchema.Model"
+										},
+										"name": "Model",
+										"package": "@samchon/openapi",
+										"qualifiedName": "ILlmSchema.Model"
+									}
+								}
+							],
+							"parameters": [
+								{
+									"id": 85,
+									"name": "props",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "Properties to construct the RPC service"
+											}
+										]
+									},
+									"type": {
+										"type": "reference",
+										"target": 94,
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": 84,
+												"name": "Model",
+												"package": "@agentica/rpc",
+												"qualifiedName": "MicroAgenticaRpcService.Model",
+												"refersToTypeParameter": true
+											}
+										],
+										"name": "IProps",
+										"package": "@agentica/rpc",
+										"qualifiedName": "MicroAgenticaRpcService.IProps"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 81,
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": 84,
+										"name": "Model",
+										"package": "@agentica/rpc",
+										"qualifiedName": "MicroAgenticaRpcService.Model",
+										"refersToTypeParameter": true
+									}
+								],
+								"name": "MicroAgenticaRpcService",
+								"package": "@agentica/rpc"
+							}
+						}
+					]
+				},
+				{
+					"id": 87,
+					"name": "conversate",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {
+						"isPublic": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Conversate with the AI agent.\r\n\r\nUser talks to the AI agent with the content.\r\n\r\nWhen AI agent responds some actions like conversating or executing\r\nLLM (Large Language Model) function calling, the functions defined in the\r\n"
+							},
+							{
+								"kind": "inline-tag",
+								"tag": "@link",
+								"text": "IAgenticaRpcListener",
+								"target": 18
+							},
+							{
+								"kind": "text",
+								"text": " would be called through the RPC\r\n(Remote Procedure Call) paradigm."
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "MicroAgenticaRpcService.ts",
+							"line": 90,
+							"character": 15,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/MicroAgenticaRpcService.ts#L90"
+						}
+					],
+					"signatures": [
+						{
+							"id": 88,
+							"name": "conversate",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "Returned when the conversation process is completely done"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "MicroAgenticaRpcService.ts",
+									"line": 90,
+									"character": 15,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/MicroAgenticaRpcService.ts#L90"
+								}
+							],
+							"parameters": [
+								{
+									"id": 89,
+									"name": "content",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The content to talk"
+											}
+										]
+									},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "intrinsic",
+												"name": "string"
+											},
+											{
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../packages/core/src/histories/contents/AgenticaUserMessageContent.ts",
+													"qualifiedName": "AgenticaUserMessageContent"
+												},
+												"name": "AgenticaUserMessageContent",
+												"package": "@agentica/core"
+											},
+											{
+												"type": "array",
+												"elementType": {
+													"type": "reference",
+													"target": {
+														"sourceFileName": "../packages/core/src/histories/contents/AgenticaUserMessageContent.ts",
+														"qualifiedName": "AgenticaUserMessageContent"
+													},
+													"name": "AgenticaUserMessageContent",
+													"package": "@agentica/core"
+												}
+											}
+										]
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib/lib.es5.d.ts",
+									"qualifiedName": "Promise"
+								},
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "void"
+									}
+								],
+								"name": "Promise",
+								"package": "typescript"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"target": 52,
+								"name": "IAgenticaRpcService.conversate"
+							}
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"target": 52,
+						"name": "IAgenticaRpcService.conversate"
+					}
+				},
+				{
+					"id": 90,
+					"name": "getControllers",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {
+						"isPublic": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Get controllers.\r\n\r\nGet controllers, collection of functions that would be\r\ncalled by the AI chatbot."
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "MicroAgenticaRpcService.ts",
+							"line": 97,
+							"character": 15,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/MicroAgenticaRpcService.ts#L97"
+						}
+					],
+					"signatures": [
+						{
+							"id": 91,
+							"name": "getControllers",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [],
+								"blockTags": [
+									{
+										"tag": "@inheritDoc",
+										"content": []
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "MicroAgenticaRpcService.ts",
+									"line": 97,
+									"character": 15,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/MicroAgenticaRpcService.ts#L97"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib/lib.es5.d.ts",
+									"qualifiedName": "Promise"
+								},
+								"typeArguments": [
+									{
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"target": {
+												"sourceFileName": "../packages/core/src/structures/IAgenticaController.ts",
+												"qualifiedName": "IAgenticaController"
+											},
+											"typeArguments": [
+												{
+													"type": "reference",
+													"target": 84,
+													"name": "Model",
+													"package": "@agentica/rpc",
+													"qualifiedName": "MicroAgenticaRpcService.Model",
+													"refersToTypeParameter": true
+												}
+											],
+											"name": "IAgenticaController",
+											"package": "@agentica/core"
+										}
+									}
+								],
+								"name": "Promise",
+								"package": "typescript"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"target": 56,
+								"name": "IAgenticaRpcService.getControllers"
+							}
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"target": 56,
+						"name": "IAgenticaRpcService.getControllers"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"children": [
+						82
+					]
+				},
+				{
+					"title": "Methods",
+					"children": [
+						87,
+						90
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "MicroAgenticaRpcService.ts",
+					"line": 50,
+					"character": 13,
+					"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/MicroAgenticaRpcService.ts#L50"
+				},
+				{
+					"fileName": "MicroAgenticaRpcService.ts",
+					"line": 101,
+					"character": 17,
+					"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/MicroAgenticaRpcService.ts#L101"
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 92,
+					"name": "Model",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../node_modules/.pnpm/@samchon+openapi@4.3.3/node_modules/@samchon/openapi/lib/structures/ILlmSchema.d.ts",
+							"qualifiedName": "ILlmSchema.Model"
+						},
+						"name": "ILlmSchema.Model",
+						"package": "@samchon/openapi"
+					}
+				}
+			],
+			"implementedTypes": [
+				{
+					"type": "reference",
+					"target": 51,
+					"typeArguments": [
+						{
+							"type": "reference",
+							"target": 84,
+							"name": "Model",
+							"package": "@agentica/rpc",
+							"qualifiedName": "MicroAgenticaRpcService.Model",
+							"refersToTypeParameter": true
+						}
+					],
+					"name": "IAgenticaRpcService",
+					"package": "@agentica/rpc"
+				}
+			]
+		},
+		{
+			"id": 18,
+			"name": "IAgenticaRpcListener",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "RPC interface of AI agent listener.\r\n\r\n"
+					},
+					{
+						"kind": "code",
+						"text": "`IAgenticaRpcListener`"
+					},
+					{
+						"kind": "text",
+						"text": " is an interface defining an AI agent listener\r\nprovided from the client to server through the RPC (Remote Procedure Call)\r\nparadigm in the websocket protocol.\r\n\r\nIt has defined the event listener functions of "
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "AgenticaEvent"
+					},
+					{
+						"kind": "text",
+						"text": "\r\ntypes. If you skip some event typed functions' implementations,\r\nthe skipped event would be ignored.\r\n\r\nAlso, the event like listener functions of "
+					},
+					{
+						"kind": "code",
+						"text": "`IAgenticaRpcListener`"
+					},
+					{
+						"kind": "text",
+						"text": " type\r\nare remotely called when a client calls the\r\n"
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "IAgenticaRpcService.conversate",
+						"target": 52
+					},
+					{
+						"kind": "text",
+						"text": " function remotely, so that the\r\nserver responses to the client by the event listener functions.\r\n\r\nYou can connect to the WebSocket server of the AI agent like below:\r\n\r\n"
+					},
+					{
+						"kind": "code",
+						"text": "```typescript\r\nimport { IAgenticaRpcListener, IAgenticaRpcService } from \"@agentica/core\";\r\nimport { Driver, WebSocketConnector } from \"tgrid\";\r\n\r\nconst connector: WebSocketConnector<\r\n  null,\r\n  IAgenticaRpcListener,\r\n  IAgenticaRpcService\r\n> = new WebSocketConnector(null, {\r\n  text: async (evt) => {\r\n    console.log(evt.role, evt.text);\r\n  },\r\n  describe: async (evt) => {\r\n    console.log(\"describer\", evt.text);\r\n  },\r\n});\r\nawait connector.connect(\"ws://localhost:3001\");\r\n\r\nconst driver: Driver<IAgenticaRpcService> = connector.getDriver();\r\nawait driver.conversate(\"Hello, what you can do?\");\r\n```"
+					}
+				],
+				"blockTags": [
+					{
+						"tag": "@author",
+						"content": [
+							{
+								"kind": "text",
+								"text": "Samchon"
+							}
+						]
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 23,
+					"name": "assistantMessage",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Assistant conversation message."
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "IAgenticaRpcListener.ts",
+							"line": 61,
+							"character": 2,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcListener.ts#L61"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 24,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "IAgenticaRpcListener.ts",
+									"line": 61,
+									"character": 20,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcListener.ts#L61"
+								}
+							],
+							"signatures": [
+								{
+									"id": 25,
+									"name": "__type",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "IAgenticaRpcListener.ts",
+											"line": 61,
+											"character": 20,
+											"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcListener.ts#L61"
+										}
+									],
+									"parameters": [
+										{
+											"id": 26,
+											"name": "evt",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Event of assistant conversation"
+													}
+												]
+											},
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../packages/core/src/json/IAgenticaEventJson.ts",
+													"qualifiedName": "IAgenticaEventJson.IAssistantMessage"
+												},
+												"name": "IAssistantMessage",
+												"package": "@agentica/core",
+												"qualifiedName": "IAgenticaEventJson.IAssistantMessage"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 43,
+					"name": "call",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Call a function.\r\n\r\nInforms a function calling from the AI agent server to client.\r\n\r\nThis event comes before the function execution, so that if you return\r\na different value from the original "
+							},
+							{
+								"kind": "inline-tag",
+								"tag": "@link",
+								"text": "IAgenticaEventJson.ICall.arguments",
+								"target": {
+									"sourceFileName": "../packages/core/src/json/IAgenticaEventJson.ts",
+									"qualifiedName": "IAgenticaEventJson.ICall.arguments"
+								}
+							},
+							{
+								"kind": "text",
+								"text": ",\r\nyou can modify the arguments of the function calling.\r\n\r\nOtherwise you do not return anything ("
+							},
+							{
+								"kind": "code",
+								"text": "`undefined`"
+							},
+							{
+								"kind": "text",
+								"text": ") or "
+							},
+							{
+								"kind": "code",
+								"text": "`null`"
+							},
+							{
+								"kind": "text",
+								"text": " value, the\r\narguments of the function calling would not be modified. Also, if you are\r\nnot interested in the function calling event, you can skit its\r\nimplementation."
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "IAgenticaRpcListener.ts",
+							"line": 115,
+							"character": 2,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcListener.ts#L115"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 44,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "IAgenticaRpcListener.ts",
+									"line": 115,
+									"character": 9,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcListener.ts#L115"
+								}
+							],
+							"signatures": [
+								{
+									"id": 45,
+									"name": "__type",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"comment": {
+										"summary": [],
+										"blockTags": [
+											{
+												"tag": "@returns",
+												"content": [
+													{
+														"kind": "text",
+														"text": "New arguments if you want to modify, otherwise null or undefined"
+													}
+												]
+											}
+										]
+									},
+									"sources": [
+										{
+											"fileName": "IAgenticaRpcListener.ts",
+											"line": 115,
+											"character": 9,
+											"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcListener.ts#L115"
+										}
+									],
+									"parameters": [
+										{
+											"id": 46,
+											"name": "evt",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Event of a function calling"
+													}
+												]
+											},
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../packages/core/src/json/IAgenticaEventJson.ts",
+													"qualifiedName": "IAgenticaEventJson.ICall"
+												},
+												"name": "ICall",
+												"package": "@agentica/core",
+												"qualifiedName": "IAgenticaEventJson.ICall"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "undefined"
+													},
+													{
+														"type": "literal",
+														"value": null
+													},
+													{
+														"type": "intrinsic",
+														"name": "void"
+													},
+													{
+														"type": "intrinsic",
+														"name": "object"
+													}
+												]
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 39,
+					"name": "cancel",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Cancel a function to call.\r\n\r\nInforms a canceling function to call from the AI agent server to client."
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "IAgenticaRpcListener.ts",
+							"line": 96,
+							"character": 2,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcListener.ts#L96"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 40,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "IAgenticaRpcListener.ts",
+									"line": 96,
+									"character": 11,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcListener.ts#L96"
+								}
+							],
+							"signatures": [
+								{
+									"id": 41,
+									"name": "__type",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "IAgenticaRpcListener.ts",
+											"line": 96,
+											"character": 11,
+											"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcListener.ts#L96"
+										}
+									],
+									"parameters": [
+										{
+											"id": 42,
+											"name": "evt",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Event of canceling a function to call"
+													}
+												]
+											},
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../packages/core/src/json/IAgenticaEventJson.ts",
+													"qualifiedName": "IAgenticaEventJson.ICancel"
+												},
+												"name": "ICancel",
+												"package": "@agentica/core",
+												"qualifiedName": "IAgenticaEventJson.ICancel"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 19,
+					"name": "describe",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Describe the function executions' results.\r\n\r\nInform description message of the function execution's results from\r\nthe AI agent server to client."
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "IAgenticaRpcListener.ts",
+							"line": 54,
+							"character": 2,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcListener.ts#L54"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 20,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "IAgenticaRpcListener.ts",
+									"line": 54,
+									"character": 12,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcListener.ts#L54"
+								}
+							],
+							"signatures": [
+								{
+									"id": 21,
+									"name": "__type",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "IAgenticaRpcListener.ts",
+											"line": 54,
+											"character": 12,
+											"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcListener.ts#L54"
+										}
+									],
+									"parameters": [
+										{
+											"id": 22,
+											"name": "evt",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Event of a description of function execution results"
+													}
+												]
+											},
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../packages/core/src/json/IAgenticaEventJson.ts",
+													"qualifiedName": "IAgenticaEventJson.IDescribe"
+												},
+												"name": "IDescribe",
+												"package": "@agentica/core",
+												"qualifiedName": "IAgenticaEventJson.IDescribe"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 47,
+					"name": "execute",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Executition of a function.\r\n\r\nInforms a function execution from the AI agent server to client."
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "IAgenticaRpcListener.ts",
+							"line": 124,
+							"character": 2,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcListener.ts#L124"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 48,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "IAgenticaRpcListener.ts",
+									"line": 124,
+									"character": 12,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcListener.ts#L124"
+								}
+							],
+							"signatures": [
+								{
+									"id": 49,
+									"name": "__type",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "IAgenticaRpcListener.ts",
+											"line": 124,
+											"character": 12,
+											"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcListener.ts#L124"
+										}
+									],
+									"parameters": [
+										{
+											"id": 50,
+											"name": "evt",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Event of a function execution"
+													}
+												]
+											},
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../packages/core/src/json/IAgenticaEventJson.ts",
+													"qualifiedName": "IAgenticaEventJson.IExecute"
+												},
+												"name": "IExecute",
+												"package": "@agentica/core",
+												"qualifiedName": "IAgenticaEventJson.IExecute"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 31,
+					"name": "initialize",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Initialize the AI agent.\r\n\r\nInforms an initialization of controller functions from\r\nthe AI agent server to client."
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "IAgenticaRpcListener.ts",
+							"line": 78,
+							"character": 2,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcListener.ts#L78"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 32,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "IAgenticaRpcListener.ts",
+									"line": 78,
+									"character": 15,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcListener.ts#L78"
+								}
+							],
+							"signatures": [
+								{
+									"id": 33,
+									"name": "__type",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "IAgenticaRpcListener.ts",
+											"line": 78,
+											"character": 15,
+											"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcListener.ts#L78"
+										}
+									],
+									"parameters": [
+										{
+											"id": 34,
+											"name": "evt",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Event of initialization"
+													}
+												]
+											},
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../packages/core/src/json/IAgenticaEventJson.ts",
+													"qualifiedName": "IAgenticaEventJson.IInitialize"
+												},
+												"name": "IInitialize",
+												"package": "@agentica/core",
+												"qualifiedName": "IAgenticaEventJson.IInitialize"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 35,
+					"name": "select",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Select a function to call.\r\n\r\nInforms a selected function to call from the AI agent server to client."
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "IAgenticaRpcListener.ts",
+							"line": 87,
+							"character": 2,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcListener.ts#L87"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 36,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "IAgenticaRpcListener.ts",
+									"line": 87,
+									"character": 11,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcListener.ts#L87"
+								}
+							],
+							"signatures": [
+								{
+									"id": 37,
+									"name": "__type",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "IAgenticaRpcListener.ts",
+											"line": 87,
+											"character": 11,
+											"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcListener.ts#L87"
+										}
+									],
+									"parameters": [
+										{
+											"id": 38,
+											"name": "evt",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Event of selecting a function to call"
+													}
+												]
+											},
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../packages/core/src/json/IAgenticaEventJson.ts",
+													"qualifiedName": "IAgenticaEventJson.ISelect"
+												},
+												"name": "ISelect",
+												"package": "@agentica/core",
+												"qualifiedName": "IAgenticaEventJson.ISelect"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 27,
+					"name": "userMessage",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "User conversation message."
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "IAgenticaRpcListener.ts",
+							"line": 68,
+							"character": 2,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcListener.ts#L68"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 28,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "IAgenticaRpcListener.ts",
+									"line": 68,
+									"character": 16,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcListener.ts#L68"
+								}
+							],
+							"signatures": [
+								{
+									"id": 29,
+									"name": "__type",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "IAgenticaRpcListener.ts",
+											"line": 68,
+											"character": 16,
+											"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcListener.ts#L68"
+										}
+									],
+									"parameters": [
+										{
+											"id": 30,
+											"name": "evt",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Event of user conversation"
+													}
+												]
+											},
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../packages/core/src/json/IAgenticaEventJson.ts",
+													"qualifiedName": "IAgenticaEventJson.IUserMessage"
+												},
+												"name": "IUserMessage",
+												"package": "@agentica/core",
+												"qualifiedName": "IAgenticaEventJson.IUserMessage"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						}
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						23,
+						43,
+						39,
+						19,
+						47,
+						31,
+						35,
+						27
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "IAgenticaRpcListener.ts",
+					"line": 45,
+					"character": 17,
+					"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcListener.ts#L45"
+				}
+			]
+		},
+		{
+			"id": 51,
+			"name": "IAgenticaRpcService",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "RPC interface of AI agent service.\r\n\r\n"
+					},
+					{
+						"kind": "code",
+						"text": "`IAgenticaRpcService`"
+					},
+					{
+						"kind": "text",
+						"text": " is an interface defining an AI agent service\r\nprovided from the server to client through the RPC (Remote Procedure Call)\r\nparadigm in the websocket protocol.\r\n\r\nThe client will call the "
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "conversate",
+						"target": 52
+					},
+					{
+						"kind": "text",
+						"text": " function remotely, and the\r\nserver responses to the client by calling the client's\r\n"
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "IAgenticaRpcListener",
+						"target": 18
+					},
+					{
+						"kind": "text",
+						"text": " functions remotely too."
+					}
+				],
+				"blockTags": [
+					{
+						"tag": "@author",
+						"content": [
+							{
+								"kind": "text",
+								"text": "Samchon"
+							}
+						]
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 52,
+					"name": "conversate",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Conversate with the AI agent.\r\n\r\nUser talks to the AI agent with the content.\r\n\r\nWhen AI agent responds some actions like conversating or executing\r\nLLM (Large Language Model) function calling, the functions defined in the\r\n"
+							},
+							{
+								"kind": "inline-tag",
+								"tag": "@link",
+								"text": "IAgenticaRpcListener",
+								"target": 18
+							},
+							{
+								"kind": "text",
+								"text": " would be called through the RPC\r\n(Remote Procedure Call) paradigm."
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "IAgenticaRpcService.ts",
+							"line": 31,
+							"character": 2,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcService.ts#L31"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 53,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "IAgenticaRpcService.ts",
+									"line": 31,
+									"character": 14,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcService.ts#L31"
+								}
+							],
+							"signatures": [
+								{
+									"id": 54,
+									"name": "__type",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"comment": {
+										"summary": [],
+										"blockTags": [
+											{
+												"tag": "@returns",
+												"content": [
+													{
+														"kind": "text",
+														"text": "Returned when the conversation process is completely done"
+													}
+												]
+											}
+										]
+									},
+									"sources": [
+										{
+											"fileName": "IAgenticaRpcService.ts",
+											"line": 31,
+											"character": 14,
+											"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcService.ts#L31"
+										}
+									],
+									"parameters": [
+										{
+											"id": 55,
+											"name": "content",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The content to talk"
+													}
+												]
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../packages/core/src/histories/contents/AgenticaUserMessageContent.ts",
+															"qualifiedName": "AgenticaUserMessageContent"
+														},
+														"name": "AgenticaUserMessageContent",
+														"package": "@agentica/core"
+													},
+													{
+														"type": "array",
+														"elementType": {
+															"type": "reference",
+															"target": {
+																"sourceFileName": "../packages/core/src/histories/contents/AgenticaUserMessageContent.ts",
+																"qualifiedName": "AgenticaUserMessageContent"
+															},
+															"name": "AgenticaUserMessageContent",
+															"package": "@agentica/core"
+														}
+													}
+												]
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 56,
+					"name": "getControllers",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Get controllers.\r\n\r\nGet controllers, collection of functions that would be\r\ncalled by the AI chatbot."
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "IAgenticaRpcService.ts",
+							"line": 44,
+							"character": 2,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcService.ts#L44"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 57,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "IAgenticaRpcService.ts",
+									"line": 44,
+									"character": 18,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcService.ts#L44"
+								}
+							],
+							"signatures": [
+								{
+									"id": 58,
+									"name": "__type",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "IAgenticaRpcService.ts",
+											"line": 44,
+											"character": 18,
+											"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcService.ts#L44"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "array",
+												"elementType": {
+													"type": "reference",
+													"target": {
+														"sourceFileName": "../packages/core/src/structures/IAgenticaController.ts",
+														"qualifiedName": "IAgenticaController"
+													},
+													"typeArguments": [
+														{
+															"type": "reference",
+															"target": 59,
+															"name": "Model",
+															"package": "@agentica/rpc",
+															"qualifiedName": "IAgenticaRpcService.Model",
+															"refersToTypeParameter": true
+														}
+													],
+													"name": "IAgenticaController",
+													"package": "@agentica/core"
+												}
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						}
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						52,
+						56
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "IAgenticaRpcService.ts",
+					"line": 17,
+					"character": 17,
+					"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IAgenticaRpcService.ts#L17"
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 59,
+					"name": "Model",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../node_modules/.pnpm/@samchon+openapi@4.3.3/node_modules/@samchon/openapi/lib/structures/ILlmSchema.d.ts",
+							"qualifiedName": "ILlmSchema.Model"
+						},
+						"name": "ILlmSchema.Model",
+						"package": "@samchon/openapi"
+					}
+				}
+			],
+			"implementedBy": [
+				{
+					"type": "reference",
+					"target": 1,
+					"name": "AgenticaRpcService"
+				},
+				{
+					"type": "reference",
+					"target": 81,
+					"name": "MicroAgenticaRpcService"
+				}
+			]
+		},
+		{
+			"id": 60,
+			"name": "IMicroAgenticaRpcListener",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "RPC interface of Micro agent listener.\r\n\r\n"
+					},
+					{
+						"kind": "code",
+						"text": "`IMicroAgenticaRpcListener`"
+					},
+					{
+						"kind": "text",
+						"text": " is an interface defining an AI agent listener\r\nprovided from the client to server through the RPC (Remote Procedure Call)\r\nparadigm in the websocket protocol.\r\n\r\nIt has defined the event listener functions of "
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "MicroAgenticaEvent"
+					},
+					{
+						"kind": "text",
+						"text": "\r\ntypes. If you skip some event typed functions' implementations,\r\nthe skipped event would be ignored.\r\n\r\nAlso, the event like listener functions of "
+					},
+					{
+						"kind": "code",
+						"text": "`IMicroAgenticaRpcListener`"
+					},
+					{
+						"kind": "text",
+						"text": " type\r\nare remotely called when a client calls the\r\n"
+					},
+					{
+						"kind": "inline-tag",
+						"tag": "@link",
+						"text": "IAgenticaRpcService.conversate",
+						"target": 52
+					},
+					{
+						"kind": "text",
+						"text": " function remotely, so that the\r\nserver responses to the client by the event listener functions.\r\n\r\nYou can connect to the WebSocket server of the AI agent like below:\r\n\r\n"
+					},
+					{
+						"kind": "code",
+						"text": "```typescript\r\nimport {\r\n  IMicroAgenticaRpcListener,\r\n  IAgenticaRpcService\r\n} from \"@agentica/core\";\r\nimport { Driver, WebSocketConnector } from \"tgrid\";\r\n\r\nconst connector: WebSocketConnector<\r\n  null,\r\n  IMicroAgenticaRpcListener,\r\n  IAgenticaRpcService\r\n> = new WebSocketConnector(null, {\r\n  text: async (evt) => {\r\n    console.log(evt.role, evt.text);\r\n  },\r\n  describe: async (evt) => {\r\n    console.log(\"describer\", evt.text);\r\n  },\r\n});\r\nawait connector.connect(\"ws://localhost:3001\");\r\n\r\nconst driver: Driver<IAgenticaRpcService> = connector.getDriver();\r\nawait driver.conversate(\"Hello, what you can do?\");\r\n```"
+					}
+				],
+				"blockTags": [
+					{
+						"tag": "@author",
+						"content": [
+							{
+								"kind": "text",
+								"text": "Samchon"
+							}
+						]
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 65,
+					"name": "assistantMessage",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Assistant conversation message."
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "IMicroAgenticaRpcListener.ts",
+							"line": 64,
+							"character": 2,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IMicroAgenticaRpcListener.ts#L64"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 66,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "IMicroAgenticaRpcListener.ts",
+									"line": 64,
+									"character": 20,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IMicroAgenticaRpcListener.ts#L64"
+								}
+							],
+							"signatures": [
+								{
+									"id": 67,
+									"name": "__type",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "IMicroAgenticaRpcListener.ts",
+											"line": 64,
+											"character": 20,
+											"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IMicroAgenticaRpcListener.ts#L64"
+										}
+									],
+									"parameters": [
+										{
+											"id": 68,
+											"name": "evt",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Event of assistant conversation"
+													}
+												]
+											},
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../packages/core/src/json/IAgenticaEventJson.ts",
+													"qualifiedName": "IAgenticaEventJson.IAssistantMessage"
+												},
+												"name": "IAssistantMessage",
+												"package": "@agentica/core",
+												"qualifiedName": "IAgenticaEventJson.IAssistantMessage"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 73,
+					"name": "call",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Call a function.\r\n\r\nInforms a function calling from the AI agent server to client.\r\n\r\nThis event comes before the function execution, so that if you return\r\na different value from the original "
+							},
+							{
+								"kind": "inline-tag",
+								"tag": "@link",
+								"text": "IAgenticaEventJson.ICall.arguments",
+								"target": {
+									"sourceFileName": "../packages/core/src/json/IAgenticaEventJson.ts",
+									"qualifiedName": "IAgenticaEventJson.ICall.arguments"
+								}
+							},
+							{
+								"kind": "text",
+								"text": ",\r\nyou can modify the arguments of the function calling.\r\n\r\nOtherwise you do not return anything ("
+							},
+							{
+								"kind": "code",
+								"text": "`undefined`"
+							},
+							{
+								"kind": "text",
+								"text": ") or "
+							},
+							{
+								"kind": "code",
+								"text": "`null`"
+							},
+							{
+								"kind": "text",
+								"text": " value, the\r\narguments of the function calling would not be modified. Also, if you are\r\nnot interested in the function calling event, you can skit its\r\nimplementation."
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "IMicroAgenticaRpcListener.ts",
+							"line": 90,
+							"character": 2,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IMicroAgenticaRpcListener.ts#L90"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 74,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "IMicroAgenticaRpcListener.ts",
+									"line": 90,
+									"character": 9,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IMicroAgenticaRpcListener.ts#L90"
+								}
+							],
+							"signatures": [
+								{
+									"id": 75,
+									"name": "__type",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"comment": {
+										"summary": [],
+										"blockTags": [
+											{
+												"tag": "@returns",
+												"content": [
+													{
+														"kind": "text",
+														"text": "New arguments if you want to modify, otherwise null or undefined"
+													}
+												]
+											}
+										]
+									},
+									"sources": [
+										{
+											"fileName": "IMicroAgenticaRpcListener.ts",
+											"line": 90,
+											"character": 9,
+											"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IMicroAgenticaRpcListener.ts#L90"
+										}
+									],
+									"parameters": [
+										{
+											"id": 76,
+											"name": "evt",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Event of a function calling"
+													}
+												]
+											},
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../packages/core/src/json/IAgenticaEventJson.ts",
+													"qualifiedName": "IAgenticaEventJson.ICall"
+												},
+												"name": "ICall",
+												"package": "@agentica/core",
+												"qualifiedName": "IAgenticaEventJson.ICall"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "undefined"
+													},
+													{
+														"type": "literal",
+														"value": null
+													},
+													{
+														"type": "intrinsic",
+														"name": "void"
+													},
+													{
+														"type": "intrinsic",
+														"name": "object"
+													}
+												]
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 61,
+					"name": "describe",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Describe the function executions' results.\r\n\r\nInform description message of the function execution's results from\r\nthe AI agent server to client."
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "IMicroAgenticaRpcListener.ts",
+							"line": 57,
+							"character": 2,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IMicroAgenticaRpcListener.ts#L57"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 62,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "IMicroAgenticaRpcListener.ts",
+									"line": 57,
+									"character": 12,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IMicroAgenticaRpcListener.ts#L57"
+								}
+							],
+							"signatures": [
+								{
+									"id": 63,
+									"name": "__type",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "IMicroAgenticaRpcListener.ts",
+											"line": 57,
+											"character": 12,
+											"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IMicroAgenticaRpcListener.ts#L57"
+										}
+									],
+									"parameters": [
+										{
+											"id": 64,
+											"name": "evt",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Event of a description of function execution results"
+													}
+												]
+											},
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../packages/core/src/json/IAgenticaEventJson.ts",
+													"qualifiedName": "IAgenticaEventJson.IDescribe"
+												},
+												"name": "IDescribe",
+												"package": "@agentica/core",
+												"qualifiedName": "IAgenticaEventJson.IDescribe"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 77,
+					"name": "execute",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Executition of a function.\r\n\r\nInforms a function execution from the AI agent server to client."
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "IMicroAgenticaRpcListener.ts",
+							"line": 99,
+							"character": 2,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IMicroAgenticaRpcListener.ts#L99"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 78,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "IMicroAgenticaRpcListener.ts",
+									"line": 99,
+									"character": 12,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IMicroAgenticaRpcListener.ts#L99"
+								}
+							],
+							"signatures": [
+								{
+									"id": 79,
+									"name": "__type",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "IMicroAgenticaRpcListener.ts",
+											"line": 99,
+											"character": 12,
+											"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IMicroAgenticaRpcListener.ts#L99"
+										}
+									],
+									"parameters": [
+										{
+											"id": 80,
+											"name": "evt",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Event of a function execution"
+													}
+												]
+											},
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../packages/core/src/json/IAgenticaEventJson.ts",
+													"qualifiedName": "IAgenticaEventJson.IExecute"
+												},
+												"name": "IExecute",
+												"package": "@agentica/core",
+												"qualifiedName": "IAgenticaEventJson.IExecute"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 69,
+					"name": "userMessage",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "User conversation message."
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "IMicroAgenticaRpcListener.ts",
+							"line": 71,
+							"character": 2,
+							"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IMicroAgenticaRpcListener.ts#L71"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 70,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "IMicroAgenticaRpcListener.ts",
+									"line": 71,
+									"character": 16,
+									"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IMicroAgenticaRpcListener.ts#L71"
+								}
+							],
+							"signatures": [
+								{
+									"id": 71,
+									"name": "__type",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "IMicroAgenticaRpcListener.ts",
+											"line": 71,
+											"character": 16,
+											"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IMicroAgenticaRpcListener.ts#L71"
+										}
+									],
+									"parameters": [
+										{
+											"id": 72,
+											"name": "evt",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Event of user conversation"
+													}
+												]
+											},
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../packages/core/src/json/IAgenticaEventJson.ts",
+													"qualifiedName": "IAgenticaEventJson.IUserMessage"
+												},
+												"name": "IUserMessage",
+												"package": "@agentica/core",
+												"qualifiedName": "IAgenticaEventJson.IUserMessage"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						}
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						65,
+						73,
+						61,
+						77,
+						69
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "IMicroAgenticaRpcListener.ts",
+					"line": 48,
+					"character": 17,
+					"url": "https://github.com/HaeungLee/finalteam/blob/9cad6d3ecc7c9649498eef538797e038f42571a9/packages/rpc/src/IMicroAgenticaRpcListener.ts#L48"
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Namespaces",
+			"children": [
+				13,
+				93
+			]
+		},
+		{
+			"title": "Classes",
+			"children": [
+				1,
+				81
+			]
+		},
+		{
+			"title": "Interfaces",
+			"children": [
+				18,
+				51,
+				60
+			]
+		}
+	],
+	"packageName": "@agentica/rpc",
+	"readme": [
+		{
+			"kind": "text",
+			"text": "# Agentica, AI Function Calling Framework\n\n![Agentica - ReadMe Diagram](https://github.com/user-attachments/assets/ecd06d51-b818-41c8-ab31-f0e40f48034e)\n\n<!-- Github/NPM Badges -->\n<p align=\"center\">\n  <a href=\"https://github.com/wrtnlabs/agentica/blob/master/LICENSE\"><img src=\"https://img.shields.io/badge/license-MIT-blue.svg\" alt=\"MIT License\"/></a>\n  <a href=\"https://www.npmjs.com/package/@agentica/core\"><img src=\"https://img.shields.io/npm/v/@agentica/core.svg\" alt=\"NPM Version\"/></a>\n  <a href=\"https://www.npmjs.com/package/@agentica/core\"><img src=\"https://img.shields.io/npm/dm/@agentica/core.svg\" alt=\"NPM Downloads\"/></a>\n  <a href=\"https://dormoshe.io/newsletters/373\"><img src=\"https://img.shields.io/badge/DorMoshe%20Newsletter-Top%20%236%20of%201K-orange?style=flat&logo=rss\" alt=\"Newsletter Top #6\"/></a>\n <a href=\"https://github.com/wrtnlabs/agentica/actions?query=workflow%3Abuild\"><img src=\"https://github.com/wrtnlabs/agentica/workflows/build/badge.svg\" alt=\"Build Status\"/></a>\n</p>\n\n<!-- Youtube + Discord -->\n<p align=\"center\">\n  <a href=\"https://www.youtube.com/@wrtnlabs\">\n    <img src=\"https://img.shields.io/badge/YouTube%20Tutorial-0d1117?style=social&logo=youtube\" alt=\"YouTube\"/>\n  </a>\n  &nbsp;\n  <a href=\"https://discord.gg/aMhRmzkqCx\">\n    <img src=\"https://img.shields.io/badge/Discord-0d1117?style=social&logo=discord\" alt=\"Discord\"/>\n  </a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://www.bloomberg.com/news/videos/2025-03-31/wtrn-on-series-b-funding-growth-strategy-video\">\n    <img src=\"https://wrtnlabs.io/agentica/images/badges/fund-raising-news-202503.svg\" />\n  </a>\n  &nbsp;&nbsp;\n  <a href=\"https://github.com/wrtnlabs\">\n    <img src=\"https://wrtnlabs.io/agentica/images/badges/open-source-mission.svg\" />\n  </a>\n</p>\n\nAgentic AI framework specialized in AI Function Calling.\n\nDon't be afraid of AI agent development. Just list functions from three protocols below. This is everything you should do for AI agent development.\n\n- TypeScript Class\n- Swagger/OpenAPI Document\n- MCP (Model Context Protocol) Server\n\nWanna make an e-commerce agent? Bring in e-commerce functions. Need a newspaper agent? Get API functions from the newspaper company. Just prepare any functions that you need, then it becomes an AI agent.\n\nAre you a TypeScript developer? Then you're already an AI developer. Familiar with backend development? You're already well-versed in AI development. Anyone who can make functions can make AI agents.\n\n<!-- eslint-skip -->\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```typescript\n\nimport { Agentica, assertHttpController } from \"@agentica/core\";\nimport OpenAI from \"openai\";\nimport typia from \"typia\";\n\nimport { MobileFileSystem } from \"./services/MobileFileSystem\";\n\nconst agent = new Agentica({\n  vendor: {\n    api: new OpenAI({ apiKey: \"********\" }),\n    model: \"gpt-4o-mini\",\n  },\n  controllers: [\n    // functions from TypeScript class\n    typia.llm.controller<MobileFileSystem, \"chatgpt\">(\n      \"filesystem\",\n      MobileFileSystem(),\n    ),\n    // functions from Swagger/OpenAPI\n    assertHttpController({\n      name: \"shopping\",\n      model: \"chatgpt\",\n      document: await fetch(\n        \"https://shopping-be.wrtn.ai/editor/swagger.json\",\n      ).then(r => r.json()),\n      connection: {\n        host: \"https://shopping-be.wrtn.ai\",\n        headers: { Authorization: \"Bearer ********\" },\n      },\n    }),\n  ],\n});\nawait agent.conversate(\"I wanna buy MacBook Pro\");\n\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n## 📦 Setup\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```bash\n$ npx agentica start <directory>\n\n----------------------------------------\n Agentica Setup Wizard\n----------------------------------------\n? Package Manager (use arrow keys)\n  > npm\n    pnpm\n    yarn (berry is not supported)\n? Project Type\n    NodeJS Agent Server\n  > NestJS Agent Server\n    React Client Application\n    Standalone Application\n? Embedded Controllers (multi-selectable)\n    (none)\n    Google Calendar\n    Google News\n  > Github\n    Reddit\n    Slack\n    ...\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\nThe setup wizard helps you create a new project tailored to your needs.\n\nFor reference, when selecting a project type, any option other than \"Standalone Application\" will implement the [WebSocket Protocol](https://wrtnlabs.io/agentica/docs/websocket/) for client-server communication.\n\nFor comprehensive setup instructions, visit our [Getting Started](https://wrtnlabs.io/agentica/docs/) guide.\n\n## 💻 Playground\n\nExperience Agentica firsthand through our [interactive playground](https://wrtnlabs.io/agentica/playground) before installing.\n\nOur demonstrations showcase the power and simplicity of Agentica's function calling capabilities across different integration methods.\n\n- [TypeScript Class](https://wrtnlabs.io/agentica/playground/bbs)\n- [Swagger/OpenAPI Document](https://wrtnlabs.io/agentica/playground/uploader)\n- [Enterprise E-commerce Agent](https://wrtnlabs.io/agentica/playground/shopping)\n\n![E-commerce Agent Demo](https://github.com/user-attachments/assets/fbfa9f93-304c-4728-933e-deb8ecd7a2af)\n\n<!--\n@todo this section would be changed after making tutorial playground\n-->\n\n## 📚 Documentation Resources\n\nFind comprehensive resources at our [official website](https://wrtnlabs.io/agentica).\n\n- [Home](https://wrtnlabs.io/agentica)\n- [Guide Documents](https://wrtnlabs.io/agentica/docs)\n  - [Setup](https://wrtnlabs.io/agentica/docs/setup/cli/)\n  - [Concepts](https://wrtnlabs.io/agentica/docs/concepts/function-calling/)\n  - [Core Library](https://wrtnlabs.io/agentica/docs/core/)\n  - [WebSocket Protocol](https://wrtnlabs.io/agentica/docs/websocket/)\n  - [Plugin Modules](https://wrtnlabs.io/agentica/docs/plugins/benchmark/)\n- [Tutorial](https://wrtnlabs.io/agentica/tutorial)\n  - [Productivity](https://wrtnlabs.io/agentica/tutorial/productivity/arxiv/)\n  - [Coding](https://wrtnlabs.io/agentica/tutorial/coding/file-system/)\n  - [React Native](https://wrtnlabs.io/agentica/tutorial/react-native/sms/)\n  - [Enterprise](https://wrtnlabs.io/agentica/tutorial/enterprise/shopping/)\n- [API Documents](https://wrtnlabs.io/agentica/api)\n- [Youtube](https://www.youtube.com/@wrtnlabs)\n- [Paper](https://wrtnlabs.io/agentica/paper)\n\nhttps://github.com/user-attachments/assets/2f2a4cdc-6cf1-4304-b82d-04a8ed0be0dd\n\n> Tutorial Videos: https://www.youtube.com/@wrtnlabs\n\n## 🌟 Why Agentica?\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```mermaid\nflowchart\n  subgraph \"JSON Schema Specification\"\n    schemav4(\"JSON Schema v4 ~ v7\") --upgrades--> emended[[\"OpenAPI v3.1 (emended)\"]]\n    schema2910(\"JSON Schema 2019-03\") --upgrades--> emended\n    schema2020(\"JSON Schema 2020-12\") --emends--> emended\n  end\n  subgraph \"Agentica\"\n    emended --\"Artificial Intelligence\"--> fc{{\"AI Function Calling\"}}\n    fc --\"OpenAI\"--> chatgpt(\"ChatGPT\")\n    fc --\"Google\"--> gemini(\"Gemini\")\n    fc --\"Anthropic\"--> claude(\"Claude\")\n    fc --\"High-Flyer\"--> deepseek(\"DeepSeek\")\n    fc --\"Meta\"--> llama(\"Llama\")\n    chatgpt --\"3.1\"--> custom([\"Custom JSON Schema\"])\n    gemini --\"3.0\"--> custom([\"Custom JSON Schema\"])\n    claude --\"3.1\"--> standard([\"Standard JSON Schema\"])\n    deepseek --\"3.1\"--> standard\n    llama --\"3.1\"--> standard\n  end\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\nAgentica enhances AI function calling by the following strategies:\n\n- [**Compiler Driven Development**](https://wrtnlabs.io/agentica/docs/concepts/compiler-driven-development): constructs function calling schema automatically by compiler skills without hand-writing.\n- [**JSON Schema Conversion**](https://wrtnlabs.io/agentica/docs/core/vendor/#schema-specification): automatically handles specification differences between LLM vendors, ensuring seamless integration regardless of your chosen AI model.\n- [**Validation Feedback**](https://wrtnlabs.io/agentica/docs/concepts/function-calling#validation-feedback): detects and corrects AI mistakes in argument composition, dramatically reducing errors and improving reliability.\n- [**Selector Agent**](https://wrtnlabs.io/agentica/docs/concepts/function-calling#orchestration-strategy): filtering candidate functions to minimize context usage, optimize performance, and reduce token consumption.\n\nThanks to these innovations, Agentica makes AI function calling easier, safer, and more accurate than before. Development becomes more intuitive since you only need to prepare functions relevant to your specific use case, and scaling your agent's capabilities is as simple as adding or removing functions.\n\nIn 2023, when OpenAI announced function calling, many predicted that function calling-driven AI development would become the mainstream. However, in reality, due to the difficulty and instability of function calling, the trend in AI development became agent workflow. Agent workflow, which is inflexible and must be created for specific purposes, has conquered the AI agent ecosystem.\n\nBy the way, as Agentica has resolved the difficulty and instability problems of function calling, the time has come to embrace function-driven AI development once again.\n\n| Type        | Workflow      | Vanilla Function Calling | Agentica Function Calling |\n| ----------- | ------------- | ------------------------ | ------------------------- |\n| Purpose     | ❌ Specific   | 🟢 General               | 🟢 General                |\n| Difficulty  | ❌ Difficult  | ❌ Difficult             | 🟢 Easy                   |\n| Stability   | 🟢 Stable     | ❌ Unstable              | 🟢 Stable                 |\n| Flexibility | ❌ Inflexible | 🟢 Flexible              | 🟢 Flexible               |\n\n## 💬 Community & Support\n\nFor support, questions, or to provide feedback, join our Discord community:\n\n[![Discord](https://dcbadge.limes.pink/api/server/https://discord.gg/aMhRmzkqCx)](https://discord.gg/aMhRmzkqCx)\n\n## ⚖️ License\n\nAgentica is open-source and available under the [MIT License](https://github.com/wrtnlabs/agentica/blob/master/LICENSE).\n\n<p align=\"center\">\n  <img src=\"https://github.com/user-attachments/assets/ecd0b82e-bfb7-4eb5-ae97-75be0cb22f10\" alt=\"Wrtn Labs Logo\" />\n</p>\n<div align=\"center\">\n  Agentica is maintained by <a href=\"https://wrtnlabs.io\">Wrtn Technologies</a> &mdash; Empowering developers to transform TypeScript functions and OpenAPI specs into powerful AI agents.\n</div>"
+		}
+	],
+	"symbolIdMap": {
+		"0": {
+			"sourceFileName": "../packages/rpc/src/index.ts",
+			"qualifiedName": ""
+		},
+		"1": {
+			"sourceFileName": "../packages/rpc/src/AgenticaRpcService.ts",
+			"qualifiedName": "AgenticaRpcService"
+		},
+		"2": {
+			"sourceFileName": "../packages/rpc/src/AgenticaRpcService.ts",
+			"qualifiedName": "AgenticaRpcService.__constructor"
+		},
+		"3": {
+			"sourceFileName": "../packages/rpc/src/AgenticaRpcService.ts",
+			"qualifiedName": "AgenticaRpcService"
+		},
+		"4": {
+			"sourceFileName": "../packages/rpc/src/AgenticaRpcService.ts",
+			"qualifiedName": "AgenticaRpcService.Model"
+		},
+		"5": {
+			"sourceFileName": "../packages/rpc/src/AgenticaRpcService.ts",
+			"qualifiedName": "props"
+		},
+		"7": {
+			"sourceFileName": "../packages/rpc/src/AgenticaRpcService.ts",
+			"qualifiedName": "AgenticaRpcService.conversate"
+		},
+		"8": {
+			"sourceFileName": "../packages/rpc/src/AgenticaRpcService.ts",
+			"qualifiedName": "AgenticaRpcService.conversate"
+		},
+		"9": {
+			"sourceFileName": "../packages/rpc/src/AgenticaRpcService.ts",
+			"qualifiedName": "content"
+		},
+		"10": {
+			"sourceFileName": "../packages/rpc/src/AgenticaRpcService.ts",
+			"qualifiedName": "AgenticaRpcService.getControllers"
+		},
+		"11": {
+			"sourceFileName": "../packages/rpc/src/AgenticaRpcService.ts",
+			"qualifiedName": "AgenticaRpcService.getControllers"
+		},
+		"12": {
+			"sourceFileName": "../packages/rpc/src/AgenticaRpcService.ts",
+			"qualifiedName": "AgenticaRpcService.Model"
+		},
+		"13": {
+			"sourceFileName": "../packages/rpc/src/AgenticaRpcService.ts",
+			"qualifiedName": "AgenticaRpcService"
+		},
+		"14": {
+			"sourceFileName": "../packages/rpc/src/AgenticaRpcService.ts",
+			"qualifiedName": "AgenticaRpcService.IProps"
+		},
+		"15": {
+			"sourceFileName": "../packages/rpc/src/AgenticaRpcService.ts",
+			"qualifiedName": "AgenticaRpcService.IProps.agent"
+		},
+		"16": {
+			"sourceFileName": "../packages/rpc/src/AgenticaRpcService.ts",
+			"qualifiedName": "AgenticaRpcService.IProps.listener"
+		},
+		"17": {
+			"sourceFileName": "../packages/rpc/src/AgenticaRpcService.ts",
+			"qualifiedName": "AgenticaRpcService.IProps.Model"
+		},
+		"18": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "IAgenticaRpcListener"
+		},
+		"19": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "IAgenticaRpcListener.describe"
+		},
+		"20": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "__type"
+		},
+		"21": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "__type"
+		},
+		"22": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "evt"
+		},
+		"23": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "IAgenticaRpcListener.assistantMessage"
+		},
+		"24": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "__type"
+		},
+		"25": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "__type"
+		},
+		"26": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "evt"
+		},
+		"27": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "IAgenticaRpcListener.userMessage"
+		},
+		"28": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "__type"
+		},
+		"29": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "__type"
+		},
+		"30": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "evt"
+		},
+		"31": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "IAgenticaRpcListener.initialize"
+		},
+		"32": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "__type"
+		},
+		"33": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "__type"
+		},
+		"34": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "evt"
+		},
+		"35": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "IAgenticaRpcListener.select"
+		},
+		"36": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "__type"
+		},
+		"37": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "__type"
+		},
+		"38": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "evt"
+		},
+		"39": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "IAgenticaRpcListener.cancel"
+		},
+		"40": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "__type"
+		},
+		"41": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "__type"
+		},
+		"42": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "evt"
+		},
+		"43": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "IAgenticaRpcListener.call"
+		},
+		"44": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "__type"
+		},
+		"45": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "__type"
+		},
+		"46": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "evt"
+		},
+		"47": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "IAgenticaRpcListener.execute"
+		},
+		"48": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "__type"
+		},
+		"49": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "__type"
+		},
+		"50": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcListener.ts",
+			"qualifiedName": "evt"
+		},
+		"51": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcService.ts",
+			"qualifiedName": "IAgenticaRpcService"
+		},
+		"52": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcService.ts",
+			"qualifiedName": "IAgenticaRpcService.conversate"
+		},
+		"53": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcService.ts",
+			"qualifiedName": "__type"
+		},
+		"54": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcService.ts",
+			"qualifiedName": "__type"
+		},
+		"55": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcService.ts",
+			"qualifiedName": "content"
+		},
+		"56": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcService.ts",
+			"qualifiedName": "IAgenticaRpcService.getControllers"
+		},
+		"57": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcService.ts",
+			"qualifiedName": "__type"
+		},
+		"58": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcService.ts",
+			"qualifiedName": "__type"
+		},
+		"59": {
+			"sourceFileName": "../packages/rpc/src/IAgenticaRpcService.ts",
+			"qualifiedName": "IAgenticaRpcService.Model"
+		},
+		"60": {
+			"sourceFileName": "../packages/rpc/src/IMicroAgenticaRpcListener.ts",
+			"qualifiedName": "IMicroAgenticaRpcListener"
+		},
+		"61": {
+			"sourceFileName": "../packages/rpc/src/IMicroAgenticaRpcListener.ts",
+			"qualifiedName": "IMicroAgenticaRpcListener.describe"
+		},
+		"62": {
+			"sourceFileName": "../packages/rpc/src/IMicroAgenticaRpcListener.ts",
+			"qualifiedName": "__type"
+		},
+		"63": {
+			"sourceFileName": "../packages/rpc/src/IMicroAgenticaRpcListener.ts",
+			"qualifiedName": "__type"
+		},
+		"64": {
+			"sourceFileName": "../packages/rpc/src/IMicroAgenticaRpcListener.ts",
+			"qualifiedName": "evt"
+		},
+		"65": {
+			"sourceFileName": "../packages/rpc/src/IMicroAgenticaRpcListener.ts",
+			"qualifiedName": "IMicroAgenticaRpcListener.assistantMessage"
+		},
+		"66": {
+			"sourceFileName": "../packages/rpc/src/IMicroAgenticaRpcListener.ts",
+			"qualifiedName": "__type"
+		},
+		"67": {
+			"sourceFileName": "../packages/rpc/src/IMicroAgenticaRpcListener.ts",
+			"qualifiedName": "__type"
+		},
+		"68": {
+			"sourceFileName": "../packages/rpc/src/IMicroAgenticaRpcListener.ts",
+			"qualifiedName": "evt"
+		},
+		"69": {
+			"sourceFileName": "../packages/rpc/src/IMicroAgenticaRpcListener.ts",
+			"qualifiedName": "IMicroAgenticaRpcListener.userMessage"
+		},
+		"70": {
+			"sourceFileName": "../packages/rpc/src/IMicroAgenticaRpcListener.ts",
+			"qualifiedName": "__type"
+		},
+		"71": {
+			"sourceFileName": "../packages/rpc/src/IMicroAgenticaRpcListener.ts",
+			"qualifiedName": "__type"
+		},
+		"72": {
+			"sourceFileName": "../packages/rpc/src/IMicroAgenticaRpcListener.ts",
+			"qualifiedName": "evt"
+		},
+		"73": {
+			"sourceFileName": "../packages/rpc/src/IMicroAgenticaRpcListener.ts",
+			"qualifiedName": "IMicroAgenticaRpcListener.call"
+		},
+		"74": {
+			"sourceFileName": "../packages/rpc/src/IMicroAgenticaRpcListener.ts",
+			"qualifiedName": "__type"
+		},
+		"75": {
+			"sourceFileName": "../packages/rpc/src/IMicroAgenticaRpcListener.ts",
+			"qualifiedName": "__type"
+		},
+		"76": {
+			"sourceFileName": "../packages/rpc/src/IMicroAgenticaRpcListener.ts",
+			"qualifiedName": "evt"
+		},
+		"77": {
+			"sourceFileName": "../packages/rpc/src/IMicroAgenticaRpcListener.ts",
+			"qualifiedName": "IMicroAgenticaRpcListener.execute"
+		},
+		"78": {
+			"sourceFileName": "../packages/rpc/src/IMicroAgenticaRpcListener.ts",
+			"qualifiedName": "__type"
+		},
+		"79": {
+			"sourceFileName": "../packages/rpc/src/IMicroAgenticaRpcListener.ts",
+			"qualifiedName": "__type"
+		},
+		"80": {
+			"sourceFileName": "../packages/rpc/src/IMicroAgenticaRpcListener.ts",
+			"qualifiedName": "evt"
+		},
+		"81": {
+			"sourceFileName": "../packages/rpc/src/MicroAgenticaRpcService.ts",
+			"qualifiedName": "MicroAgenticaRpcService"
+		},
+		"82": {
+			"sourceFileName": "../packages/rpc/src/MicroAgenticaRpcService.ts",
+			"qualifiedName": "MicroAgenticaRpcService.__constructor"
+		},
+		"83": {
+			"sourceFileName": "../packages/rpc/src/MicroAgenticaRpcService.ts",
+			"qualifiedName": "MicroAgenticaRpcService"
+		},
+		"84": {
+			"sourceFileName": "../packages/rpc/src/MicroAgenticaRpcService.ts",
+			"qualifiedName": "MicroAgenticaRpcService.Model"
+		},
+		"85": {
+			"sourceFileName": "../packages/rpc/src/MicroAgenticaRpcService.ts",
+			"qualifiedName": "props"
+		},
+		"87": {
+			"sourceFileName": "../packages/rpc/src/MicroAgenticaRpcService.ts",
+			"qualifiedName": "MicroAgenticaRpcService.conversate"
+		},
+		"88": {
+			"sourceFileName": "../packages/rpc/src/MicroAgenticaRpcService.ts",
+			"qualifiedName": "MicroAgenticaRpcService.conversate"
+		},
+		"89": {
+			"sourceFileName": "../packages/rpc/src/MicroAgenticaRpcService.ts",
+			"qualifiedName": "content"
+		},
+		"90": {
+			"sourceFileName": "../packages/rpc/src/MicroAgenticaRpcService.ts",
+			"qualifiedName": "MicroAgenticaRpcService.getControllers"
+		},
+		"91": {
+			"sourceFileName": "../packages/rpc/src/MicroAgenticaRpcService.ts",
+			"qualifiedName": "MicroAgenticaRpcService.getControllers"
+		},
+		"92": {
+			"sourceFileName": "../packages/rpc/src/MicroAgenticaRpcService.ts",
+			"qualifiedName": "MicroAgenticaRpcService.Model"
+		},
+		"93": {
+			"sourceFileName": "../packages/rpc/src/MicroAgenticaRpcService.ts",
+			"qualifiedName": "MicroAgenticaRpcService"
+		},
+		"94": {
+			"sourceFileName": "../packages/rpc/src/MicroAgenticaRpcService.ts",
+			"qualifiedName": "MicroAgenticaRpcService.IProps"
+		},
+		"95": {
+			"sourceFileName": "../packages/rpc/src/MicroAgenticaRpcService.ts",
+			"qualifiedName": "MicroAgenticaRpcService.IProps.agent"
+		},
+		"96": {
+			"sourceFileName": "../packages/rpc/src/MicroAgenticaRpcService.ts",
+			"qualifiedName": "MicroAgenticaRpcService.IProps.listener"
+		},
+		"97": {
+			"sourceFileName": "../packages/rpc/src/MicroAgenticaRpcService.ts",
+			"qualifiedName": "MicroAgenticaRpcService.IProps.Model"
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "../packages/rpc/src/index.ts"
+		},
+		"reflections": {
+			"1": 0
+		}
+	}
+}
