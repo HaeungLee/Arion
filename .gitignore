@@ -1,0 +1,471 @@
+# ==================================
+# 종합 .gitignore 파일
+# Java/Spring Boot + Node.js/TypeScript + Python 프로젝트용
+# ==================================
+
+# =====================================
+# Python 관련
+# =====================================
+# 가상환경
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# Python 바이트코드
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# 패키지 관련
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# =====================================
+# Node.js 관련
+# =====================================
+# 의존성
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# 빌드 결과물
+dist/
+lib/
+.next/
+out/
+build/
+
+# TypeScript
+*.tsbuildinfo
+.tscache/
+
+# 패키지 관련
+*.tgz
+*.tar.gz
+
+# =====================================
+# Java/Gradle 관련
+# =====================================
+# Gradle
+.gradle/
+build/
+gradle/
+gradlew
+gradlew.bat
+!gradle/wrapper/gradle-wrapper.properties
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Java 컴파일 결과물
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+
+# Maven (혹시 사용할 경우)
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# =====================================
+# IDE/Editor 설정 파일
+# =====================================
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# Eclipse
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# =====================================
+# 환경 설정 파일
+# =====================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.example
+
+# =====================================
+# 로그 및 임시 파일
+# =====================================
+# 로그 파일
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 임시 파일 및 디렉토리
+process/
+temp/
+tmp/
+temp_*/
+recordings/
+output/
+*.tmp
+*.temp
+
+# 서브모듈 관련 (잘못 추가된 것들)
+# finalLogin/ - 이제 포함함
+# finalteam/ - 이제 포함함
+
+# =====================================
+# 운영체제 관련
+# =====================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# =====================================
+# 테스트 및 커버리지
+# =====================================
+coverage/
+*.lcov
+.nyc_output
+.coverage
+htmlcov/
+.tox/
+.nox/
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# =====================================
+# Docker 관련
+# =====================================
+.dockerignore
+
+# =====================================
+# 기타
+# =====================================
+# Backup files
+*.bak
+*.backup
+*.orig
+
+# Archive files
+*.zip
+*.rar
+*.7z
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Certificate files
+*.pem
+*.key
+*.crt
+
+# =====================================
+# 프로젝트별 특수 파일
+# =====================================
+# 프로젝트별 임시 파일
+sttDuration
+phase3
+마이크테스트
+구조
+
+# 각 서브프로젝트의 개별 git 디렉토리 (통합 후 불필요)
+finalLogin/.git/
+finalteam/.git/
+MergeStts/.git/
+googlerefesh/.git/
+
+# 각 서브프로젝트의 빌드/캐시 파일들
+finalLogin/user/build/
+finalLogin/user/.gradle/
+
+# 프로젝트 문서 및 계획 파일 (선택적으로 포함하려면 주석 해제)
+# *.md
+# presentation*.md
+# phase*.md
+# plan*.md
+
+# 실행/테스트 스크립트들 (개발환경별로 다를 수 있음)
+*.cmd
+*.bat
+*.sh
+
+# 중요: 아래 핵심 스크립트들은 포함
+!run_all_dev.cmd
+!quick_voice_proxy.cmd
+!check_servers.cmd
+!git_setup_unified.cmd
+
+# 백업 및 성공 설정 파일
+expo_success_backup/
+backup_success_config.cmd
+restore_success_config.cmd
+
+# 오디오 관련 임시 파일
+temp_audio/
+*.wav
+*.mp3
+*.m4a
+
+# Expo 관련 추가
+.expo/
+expo-env.d.ts
+
+# 프로젝트 특수 폴더
+somethingWentWrong/
+USB/
+process/
+expo연결문제/
+
+# 불필요한 중복 폴더 (삭제 예정)
+Arion/
+
+# AI 모델 파일 (크기가 클 수 있음)
+*.model
+*.pkl
+*.joblib
+
+# 환경별 설정 파일 - 보안 강화
+.env
+.env.*
+.env.local
+.env.development
+.env.test
+.env.production
+.env.staging
+*.env
+
+# API 키 및 시크릿 파일들
+*api*key*
+*secret*
+*token*
+!*example*
+!*template*
+!*sample*
+
+# =====================================
+# 마이크로서비스 아키텍처 추가 설정
+# =====================================
+
+# React Native Metro 관련
+.metro-health-check*
+metro.config.js.backup
+*-android.apk
+*-android.aab
+
+# TypeScript 빌드 출력
+lib/
+tsc_output/
+*.tsbuildinfo
+
+# 추가 Node.js 패키지 매니저
+.pnpm-store/
+.pnpm-debug.log*
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# 개발 도구 관련
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+.vscode/.ropeproject
+*.swp
+*.swo
+
+# Spring Boot 추가
+application-*.properties
+application-*.yml
+!application.properties
+!application.yml
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Gradle 추가 (finalLogin 프로젝트용)
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Python 추가 (MergeStts 프로젝트용)
+*.egg
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pdm.toml
+
+# 오디오/음성 처리 관련 임시 파일
+*.opus
+*.flac
+*.aac
+recordings/
+voice_temp/
+
+# AI/ML 모델 파일
+*.h5
+*.onnx
+*.pb
+*.tflite
+models/
+checkpoints/
+
+# Docker 개발 환경
+docker-compose.override.yml
+.docker/
+Dockerfile.dev
+
+# 프로젝트 통합 후 생성되는 임시 파일
+merge_conflicts.txt
+git_backup/
+old_repos/
+
+# 대회 제출용 제외 파일들
+competition_notes.md
+submission_prep/
+final_build/
+
+# 로그 파일들
+logs/
+*.log
+log.txt
+debug.log
+error.log
+
+# IDE 관련
+.idea/*
+!.idea/runConfigurations
+!.idea/codeStyles
+!.idea/inspectionProfiles
+*.iml
+*.ipr
+*.iws
+
+# OS 관련 추가
+.DS_Store?
+.Spotlight-V100
+.Trashes
+Icon?
+.AppleDouble
+.LSOverride
+.DocumentRevisions-V100
+.fseventsd
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# 보안 관련 추가
+*.p12
+*.pfx
+*.jks
+*.keystore
+secrets/
+credentials/
+api_keys.json
