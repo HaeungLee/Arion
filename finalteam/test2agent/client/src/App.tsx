@@ -30,16 +30,12 @@ function AppContent() {
       {/* Navigation - 모든 페이지에서 표시 */}
       <Navigation />
 
-      {/* Header - 홈 페이지에서만 표시 */}
-      {!isChatPage && <Header onLoginClick={handleLoginClick} />}
+      {/* Header - 모든 페이지에서 표시 */}
+      <Header onLoginClick={handleLoginClick} />
 
       {/* 메인 컨텐츠 영역 */}
-      <div className={`transition-all duration-300 ${
-        isChatPage 
-          ? `${navState.isOpen ? 'ml-64' : 'ml-16'}` 
-          : `pt-16 min-h-screen ${navState.isOpen ? 'ml-64' : 'ml-16'}`
-      }`}>
-        <main className={isChatPage ? "h-screen" : "h-[calc(100vh-4rem)] overflow-auto"}>
+      <div className={`transition-all duration-300 pt-16 ${navState.isOpen ? 'ml-64' : 'ml-16'}`}>
+        <main className={isChatPage ? "h-[calc(100vh-4rem)]" : "h-[calc(100vh-4rem)] overflow-auto"}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/chat" element={<Chat />} />

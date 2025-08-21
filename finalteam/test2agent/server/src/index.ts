@@ -9,6 +9,7 @@ import { WebSocketServer } from "tgrid";
 import typia, { Primitive } from "typia";
 
 import { SGlobal } from "./SGlobal";
+import { withGoogleApiErrorHandling, GOOGLE_SERVICE_OPTIONS } from "./utils/googleApiErrorHandler";
 
 // import { AwsS3Service } from "@wrtnlabs/connector-aws-s3";
 // import { CalendlyService } from "@wrtnlabs/connector-calendly";
@@ -128,7 +129,9 @@ const createGmailService = () => {
     googleClientSecret: SGlobal.env.GOOGLE_CLIENT_SECRET || "",
     googleRefreshToken: SGlobal.env.GOOGLE_REFRESH_TOKEN || "",
   };
-  return new GmailService(props);
+  
+  const gmailService = new GmailService(props);
+  return withGoogleApiErrorHandling(gmailService, GOOGLE_SERVICE_OPTIONS.GMAIL);
 };
 
 /*
@@ -151,7 +154,9 @@ const createGoogleCalendarService = () => {
     googleClientSecret: SGlobal.env.GOOGLE_CLIENT_SECRET || "",
     googleRefreshToken: SGlobal.env.GOOGLE_REFRESH_TOKEN || "",
   };
-  return new GoogleCalendarService(props);
+  
+  const calendarService = new GoogleCalendarService(props);
+  return withGoogleApiErrorHandling(calendarService, GOOGLE_SERVICE_OPTIONS.CALENDAR);
 };
 
 const createGoogleDocsService = () => {
@@ -160,7 +165,9 @@ const createGoogleDocsService = () => {
     googleClientSecret: SGlobal.env.GOOGLE_CLIENT_SECRET || "",
     googleRefreshToken: SGlobal.env.GOOGLE_REFRESH_TOKEN || "",
   };
-  return new GoogleDocsService(props);
+
+  const docsService = new GoogleDocsService(props);
+  return withGoogleApiErrorHandling(docsService, GOOGLE_SERVICE_OPTIONS.DOCS);
 };
 
 const createGoogleDriveService = () => {
@@ -169,7 +176,9 @@ const createGoogleDriveService = () => {
     googleClientSecret: SGlobal.env.GOOGLE_CLIENT_SECRET || "",
     googleRefreshToken: SGlobal.env.GOOGLE_REFRESH_TOKEN || "",
   };
-  return new GoogleDriveService(props);
+  
+  const driveService = new GoogleDriveService(props);
+  return withGoogleApiErrorHandling(driveService, GOOGLE_SERVICE_OPTIONS.DRIVE);
 };
 
 /*

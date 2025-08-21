@@ -67,7 +67,6 @@ export function ChatInput({ onSendMessage, disabled, autoFocus = false }: ChatIn
                 className="scale-90"
               />
             </div>
-
             <textarea
               ref={textareaRef}
               value={message}
@@ -77,7 +76,7 @@ export function ChatInput({ onSendMessage, disabled, autoFocus = false }: ChatIn
               onKeyDown={handleKeyDown}
               onClick={(e) => e.stopPropagation()}
               placeholder="메시지를 입력하세요..."
-              className="w-full min-h-[60px] max-h-[120px] p-3 pl-16 pr-16 bg-gray-800/40 text-gray-100 placeholder:text-gray-400 rounded-2xl resize-none focus:outline-none focus:ring-2 focus:ring-blue-500/50 border border-gray-700/30 cursor-text select-text"
+              className="w-full min-h-[60px] max-h-[120px] p-4 pl-16 pr-16 bg-gray-800/40 text-gray-100 placeholder:text-gray-400 rounded-2xl resize-none focus:outline-none focus:ring-2 focus:ring-blue-500/50 border border-gray-700/30 cursor-text select-text text-lg"
               autoFocus={autoFocus}
             />
 

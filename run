@@ -27,7 +27,7 @@ DockerDesktop need to be on
  cd MergeStts ; python web_server.py
 
 # 3. Node.js Agent Backend (8081) - 필수
-cd finalteam/test2agent/server ; npm start
+cd finalteam/test2agent/server ; npm run dev
 
 # 4. Voice Proxy Server (8083) - 필수
  cd finalteam/test2agent/server ; npm run voice-proxy

@@ -40,7 +40,7 @@ const Navigation: React.FC = () => {
                 />
                 {state.isOpen && (
                   <h1 className="text-xl font-semibold text-white ml-3 transition-all duration-300">
-                    Agentica
+                    AriOn
                   </h1>
                 )}
               </div>

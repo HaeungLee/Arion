@@ -28,7 +28,7 @@ export const Header: React.FC<HeaderProps> = ({ onLoginClick }) => {
           className="w-8 h-8 transition-all hover:filter hover:drop-shadow-[0_0_1rem_rgba(255,255,255,0.5)]"
         />
           <h1 className="text-xl font-semibold text-white">
-            Agentica
+            AriOn
           </h1>
         </div>
 
