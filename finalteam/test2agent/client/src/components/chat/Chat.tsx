@@ -14,12 +14,16 @@ export function Chat() {
   // Handle initial message from home page
   useEffect(() => {
     const state = location.state as { initialMessage?: string; autoTTS?: boolean; detailMode?: boolean } | null;
-    if (state?.initialMessage) {
-      conversate(state.initialMessage, { autoTTS: state.autoTTS, detailMode: state.detailMode });
+    if (state?.initialMessage && isConnected) {
+      // 연결된 상태에서만 메시지 전송
+      conversate(state.initialMessage, { autoTTS: state.autoTTS, detailMode: state.detailMode })
+        .catch(error => {
+          console.error('Initial message send failed:', error);
+        });
       // Clear the state to prevent resending on re-renders
       window.history.replaceState({}, '');
     }
-  }, [location.state, conversate]);
+  }, [location.state, conversate, isConnected]);
 
   const scrollToBottom = () => {
     if (messagesContainerRef.current) {

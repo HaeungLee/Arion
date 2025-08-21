@@ -15,22 +15,27 @@ export function ChatInput({ onSendMessage, disabled, autoFocus = false }: ChatIn
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!message.trim() || disabled) return;
     
-    // Auto TTS와 Detail 모드 옵션과 함께 메시지 전송
-    onSendMessage(message, { autoTTS, detailMode });
-    setMessage("");
-    textareaRef.current?.focus();
-    
-    // Navigate to chat screen if not already there
-    if (window.location.pathname !== '/chat') {
-      navigate('/chat');
+    try {
+      // Auto TTS와 Detail 모드 옵션과 함께 메시지 전송
+      await onSendMessage(message, { autoTTS, detailMode });
+      setMessage("");
+      textareaRef.current?.focus();
+      
+      // Navigate to chat screen if not already there
+      if (window.location.pathname !== '/chat') {
+        navigate('/chat');
+      }
+    } catch (error) {
+      console.error('Message send failed:', error);
+      // 메시지 전송 실패 시 사용자에게 알림 (선택사항)
     }
   };
 
-  const handleKeyDown = (e: KeyboardEvent<HTMLTextAreaElement>) => {
+  const handleKeyDown = async (e: KeyboardEvent<HTMLTextAreaElement>) => {
     if (
       e.key === "Enter" &&
       !e.shiftKey &&
@@ -38,7 +43,7 @@ export function ChatInput({ onSendMessage, disabled, autoFocus = false }: ChatIn
     ) {
       e.preventDefault();
       if (!disabled) {
-        handleSubmit(e);
+        await handleSubmit(e);
       }
     }
   };

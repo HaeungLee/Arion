@@ -13,7 +13,7 @@ import { Driver, WebSocketConnector } from "tgrid";
 
 interface AgenticaRpcContextType {
   messages: IAgenticaEventJson[];
-  conversate: (message: string) => Promise<void>;
+  conversate: (message: string, options?: { autoTTS?: boolean; detailMode?: boolean }) => Promise<void>;
   isConnected: boolean;
   isError: boolean;
   tryConnect: () => Promise<
@@ -41,15 +41,15 @@ export function AgenticaRpcProvider({ children }: PropsWithChildren) {
       const isDuplicate = prev.some(msg => 
         msg.id === message.id && 
         msg.type === message.type &&
-        msg.content === message.content
+        JSON.stringify(msg) === JSON.stringify(message)
       );
       
       if (isDuplicate) {
-        console.warn('🚫 중복 메시지 감지, 추가하지 않음:', message.content);
+        console.warn('🚫 중복 메시지 감지, 추가하지 않음:', message.type);
         return prev;
       }
       
-      console.log('✅ 새 메시지 추가:', message.type, message.content);
+      console.log('✅ 새 메시지 추가:', message.type);
       return [...prev, message];
     });
     return Promise.resolve();
@@ -73,22 +73,53 @@ export function AgenticaRpcProvider({ children }: PropsWithChildren) {
         IAgenticaRpcService<"chatgpt">
       >(null, {
         assistantMessage: async (msg) => {
-          console.log('📥 Assistant message:', msg.content);
+          console.log('📥 Assistant message:', (msg as any).text || msg.type);
           await pushMessageRef.current(msg);
         },
         describe: async (msg) => {
-          // describe는 별도 처리하지 않고 로그만 출력
-          console.log('📋 Description:', msg.content);
-          // describe 메시지는 추가하지 않음 (중복 방지)
+          console.log('📋 Description:', (msg as any).text || msg.type);
+          
+          // describe 메시지를 UI에 표시
+          const text = (msg as any).text || '';
+          const EMAIL_SUCCESS_REGEX = /(메일|이메일).*(전송|보냈).*(성공|완료)|successfully\s+sent/i;
+          
+          if (EMAIL_SUCCESS_REGEX.test(text)) {
+            // 이메일 성공 시 특별한 스타일로 표시
+            await pushMessageRef.current({
+              ...msg,
+              id: msg.id + '-email-success',
+              type: 'assistantMessage',
+              text: '📧 이메일 전송 성공',
+              content: '📧 이메일 전송 성공'
+            } as any);
+          }
+          
+          // 모든 describe 메시지를 UI에 표시 (이메일 성공 포함)
+          await pushMessageRef.current({
+            ...msg,
+            id: msg.id + '-describe',
+            type: 'assistantMessage', 
+            text: text,
+            content: text,
+            done: true,
+            isDescribe: true  // describe 메시지임을 표시
+          } as any);
         },
         userMessage: async (msg) => {
-          console.log('👤 User message:', msg.content);
+          console.log('👤 User message:', (msg as any).contents?.[0]?.text || msg.type);
           await pushMessageRef.current(msg);
         }
       });
       
       console.log('Attempting to connect to WebSocket...');
-      await connector.connect(wsUrl);
+      
+      // 연결 타임아웃 설정 (10초)
+      const connectPromise = connector.connect(wsUrl);
+      const timeoutPromise = new Promise((_, reject) => 
+        setTimeout(() => reject(new Error('Connection timeout after 10 seconds')), 10000)
+      );
+      
+      await Promise.race([connectPromise, timeoutPromise]);
       console.log('WebSocket connected successfully');
       
       const driver = connector.getDriver();
@@ -117,19 +148,38 @@ export function AgenticaRpcProvider({ children }: PropsWithChildren) {
   }, []); // 의존성 배열을 비움
 
   const conversate = useCallback(
-    async (message: string) => {
+    async (message: string, options: { autoTTS?: boolean; detailMode?: boolean } = {}) => {
       if (!driver) {
         console.error("Driver is not connected. Please connect to the server.");
         return;
       }
       try {
+        // 옵션을 서버에 전달 (향후 서버에서 시스템 프롬프트로 처리)
+        // TODO: 서버에서 options.detailMode를 받아서 시스템 프롬프트에 반영하도록 수정 필요
         await driver.conversate(message);
       } catch (e) {
-        console.error(e);
-        setIsError(true);
+        const errorMessage = e instanceof Error ? e.message : String(e);
+        console.error('Conversate error:', errorMessage);
+        
+        // 연결이 끊어진 경우 driver를 undefined로 설정하고 재연결 시도
+        if (errorMessage.includes('connection has been closed') || 
+            errorMessage.includes('connection refused') ||
+            errorMessage.includes('WebSocket is not connected')) {
+          console.warn('🔌 연결이 끊어졌습니다. 재연결을 시도합니다...');
+          setDriver(undefined);
+          setIsError(true);
+          
+          // 잠시 후 재연결 시도
+          setTimeout(() => {
+            console.log('🔄 자동 재연결 시도...');
+            tryConnect().catch(console.error);
+          }, 1000);
+        } else {
+          setIsError(true);
+        }
       }
     },
-    [driver]
+    [driver, tryConnect]
   );
 
   useEffect(() => {
@@ -139,22 +189,33 @@ export function AgenticaRpcProvider({ children }: PropsWithChildren) {
     let hasConnected = false; // 연결 중복 방지 플래그
 
     const connect = async (retryCount = 0) => {
-      if (!mounted || hasConnected) return;
+      if (!mounted) return;
 
       try {
-        console.log(`🔌 WebSocket 연결 시도 ${retryCount + 1}/3: ws://localhost:8081`);
-        hasConnected = true; // 연결 시도 플래그 설정
+        // 이미 연결 시도 중이면 스킵
+        if (hasConnected && retryCount === 0) {
+          console.log('🔄 이미 연결 시도 중입니다...');
+          return;
+        }
+
+        console.log(`🔌 WebSocket 연결 시도 ${retryCount + 1}/3`);
+        hasConnected = true;
+        
         connector = await tryConnect();
-        setIsError(false); // 연결 성공 시 에러 상태 초기화
+        setIsError(false);
         console.log('✅ WebSocket 연결 성공');
+        
+        // 연결 성공 시 플래그 유지
+        return;
+        
       } catch (e) {
         hasConnected = false; // 연결 실패 시 플래그 리셋
         console.error("Connection error:", e);
         
-        // 개발 환경에서만 재연결 시도
-        if (import.meta.env.DEV && retryCount < 2 && mounted) {
-          const delay = Math.min(1000 * Math.pow(2, retryCount), 5000); // 지수 백오프 (최대 5초)
-          console.warn(`🔄 ${delay/1000}초 후 재연결 시도...`);
+        // 최대 3회 재시도
+        if (retryCount < 2 && mounted) {
+          const delay = Math.min(1000 * Math.pow(2, retryCount), 5000);
+          console.warn(`🔄 ${delay/1000}초 후 재연결 시도... (${retryCount + 2}/3)`);
           
           reconnectTimeout = setTimeout(() => {
             if (mounted) {
@@ -166,14 +227,13 @@ export function AgenticaRpcProvider({ children }: PropsWithChildren) {
           if (import.meta.env.DEV) {
             console.warn('💡 실행 명령: cd finalteam/test2agent/server && npm start');
           }
+          setIsError(true);
         }
       }
     };
 
-    // 한 번만 연결 시도
-    if (mounted && !hasConnected) {
-      connect();
-    }
+    // 컴포넌트 마운트 시 연결 시도
+    connect();
 
     return () => {
       mounted = false;
@@ -182,11 +242,15 @@ export function AgenticaRpcProvider({ children }: PropsWithChildren) {
         clearTimeout(reconnectTimeout);
       }
       if (connector) {
-        connector.close();
+        try {
+          connector.close();
+        } catch (e) {
+          console.warn('WebSocket 연결 해제 중 오류:', e);
+        }
         setDriver(undefined);
       }
     };
-  }, []); // 의존성 배열에서 tryConnect 제거
+  }, []); // 빈 의존성 배열로 한 번만 실행
 
   const isConnected = !!driver;
 

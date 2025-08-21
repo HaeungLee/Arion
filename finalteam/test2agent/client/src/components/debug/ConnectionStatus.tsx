@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { FiWifi, FiWifiOff, FiServer, FiAlertCircle } from 'react-icons/fi';
 import { getConfig } from '../../utils/config';
 
@@ -46,10 +46,11 @@ export function ConnectionStatus() {
 
           ws.onerror = (event) => {
             clearTimeout(timeout);
+            console.error('WebSocket connection to', service.url, 'failed:', event);
             resolve({ 
               ...service, 
               status: 'disconnected', 
-              error: 'Agent 서버가 실행되지 않음' 
+              error: '🚀 Agent 서버(8081) 미실행 - npm start 필요' 
             });
           };
 
@@ -60,7 +61,7 @@ export function ConnectionStatus() {
               resolve({ 
                 ...service, 
                 status: 'disconnected', 
-                error: 'Server not running' 
+                error: '🚀 Agent 서버(8081) 미실행 - npm start 필요' 
               });
             }
           };
