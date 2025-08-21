@@ -27,7 +27,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+# lib/ - REMOVED: Node.js 소스 복구를 위해 일시적으로 제외  
 lib64/
 parts/
 sdist/
@@ -51,12 +51,12 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
-# 빌드 결과물
-dist/
-lib/
+# 빌드 결과물  
+# dist/ - REMOVED: 클라이언트 소스 복구를 위해 일시적으로 제외
+# lib/ - REMOVED: 서버 소스 복구를 위해 일시적으로 제외
 .next/
 out/
-build/
+# build/ - REMOVED: 빌드 폴더 복구를 위해 일시적으로 제외
 
 # TypeScript
 *.tsbuildinfo
@@ -355,7 +355,7 @@ metro.config.js.backup
 *-android.aab
 
 # TypeScript 빌드 출력
-lib/
+# lib/ - REMOVED: 소스 파일 복구를 위해 일시적으로 제외
 tsc_output/
 *.tsbuildinfo
 

@@ -21,19 +21,19 @@ DockerDesktop need to be on
 # 또는 개별 실행:
 
 # 1. Spring Security (8080) - 선택사항
- cd finalLogin/user && gradlew bootRun
+ cd finalLogin/user ; gradlew bootRun
 
 # 2. Python STT/TTS (8082) - 선택사항  
- cd MergeStts && python web_server.py
+ cd MergeStts ; python web_server.py
 
-# 3. Node.js Agent Backend (3000) - 필수
-cd finalteam/test2agent/server && npm run dev
+# 3. Node.js Agent Backend (8081) - 필수
+cd finalteam/test2agent/server ; npm start
 
 # 4. Voice Proxy Server (8083) - 필수
  cd finalteam/test2agent/server ; npm run voice-proxy
 
 # 5. React Client (5173) - 웹용 (선택사항)
- cd finalteam/test2agent/client && npm run dev
+ cd finalteam/test2agent/client ; npm run dev
 
 # 6. React Native Mobile (8084) - 모바일용 필수
 cd finalteam/native && npm run expo:clear

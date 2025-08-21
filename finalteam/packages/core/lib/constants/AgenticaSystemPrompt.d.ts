@@ -1,0 +1,8 @@
+export declare const AgenticaSystemPrompt: {
+    CANCEL: string;
+    COMMON: string;
+    DESCRIBE: string;
+    EXECUTE: string;
+    INITIALIZE: string;
+    SELECT: string;
+};
